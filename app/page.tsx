@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero-section"
+import HowItWorks from "@/components/how-it-works"
 import ProblemSolution from "@/components/problem-solution"
 import WhatsIncluded from "@/components/whats-included"
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <ProblemSolution />
       <WhatsIncluded />
+      <HowItWorks />
       {/* Other sections will go here */}
     </main>
   )
