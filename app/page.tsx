@@ -2,6 +2,7 @@ import ExamplesShowcase from "@/components/examples-showcase";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/how-it-works";
 import ProblemSolution from "@/components/problem-solution";
+import TurnaroundTime from "@/components/turnaround-time";
 import WhatsIncluded from "@/components/whats-included";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <WhatsIncluded />
       <HowItWorks />
       <ExamplesShowcase />
+      <TurnaroundTime />
       {/* Other sections will go here */}
     </main>
   );
