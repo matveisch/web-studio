@@ -1,13 +1,13 @@
-import { ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white relative overflow-hidden">
-      <div className="container px-4 md:px-6 relative z-10">
+      <div className="px-4 md:px-6 relative z-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
@@ -15,7 +15,8 @@ export default function HeroSection() {
                 Get Your Professional Landing Page for $990
               </h1>
               <p className="text-gray-500 md:text-xl">
-                Our expert-designed template, customized with your brand, live in as little as 3 weeks.
+                Our expert-designed template, customized with your brand, live
+                in as little as 3 weeks.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -63,5 +64,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
