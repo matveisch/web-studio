@@ -1,3 +1,4 @@
+import CTASection from "@/components/cta-section";
 import ExamplesShowcase from "@/components/examples-showcase";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/how-it-works";
@@ -14,7 +15,7 @@ export default function Home() {
       <HowItWorks />
       <ExamplesShowcase />
       <TurnaroundTime />
-      {/* Other sections will go here */}
+      <CTASection />
     </main>
   );
 }
