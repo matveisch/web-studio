@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import type React from "react";
 
 import { Button } from "@/components/ui/button";
@@ -10,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function OrderForm() {
@@ -30,14 +29,14 @@ export default function OrderForm() {
   if (isSubmitted) {
     return (
       <div className="rounded-lg border border-green-100 bg-green-50 p-8 text-center">
-        <div className="flex justify-center mb-4">
+        <div className="mb-4 flex justify-center">
           <div className="rounded-full bg-green-100 p-3">
             <CheckCircle className="h-8 w-8 text-green-600" />
           </div>
         </div>
-        <h3 className="text-xl font-medium mb-2">Order Received!</h3>
-        <p className="text-gray-500 mb-6">
-          Thanks for ordering your landing page. We'll be in touch within 1
+        <h3 className="mb-2 text-xl font-medium">Order Received!</h3>
+        <p className="mb-6 text-gray-500">
+          Thanks for ordering your landing page. We&apos;ll be in touch within 1
           business day to get started.
         </p>
         <Button asChild>
@@ -49,10 +48,10 @@ export default function OrderForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <div className="bg-white rounded-lg border p-6">
-        <h2 className="text-xl font-bold mb-4">Your Information</h2>
+      <div className="rounded-lg border bg-white p-6">
+        <h2 className="mb-4 text-xl font-bold">Your Information</h2>
         <div className="grid gap-6">
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid gap-4 md:grid-cols-2">
             <div className="grid gap-2">
               <Label htmlFor="firstName">First Name</Label>
               <Input id="firstName" placeholder="First name" required />
@@ -85,8 +84,8 @@ export default function OrderForm() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-6">
-        <h2 className="text-xl font-bold mb-4">Project Details</h2>
+      <div className="rounded-lg border bg-white p-6">
+        <h2 className="mb-4 text-xl font-bold">Project Details</h2>
         <div className="grid gap-6">
           <div className="grid gap-2">
             <Label htmlFor="website">Current Website (if any)</Label>
@@ -159,21 +158,37 @@ export default function OrderForm() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-6">
-        <h2 className="text-xl font-bold mb-4">Payment</h2>
-        <p className="text-gray-500 mb-4">
-          After submitting this form, we'll send you an invoice for the $990
-          payment. Payment will be due before we begin work on your landing
-          page.
-        </p>
-
-        <div className="flex items-center p-4 bg-primary/5 rounded-lg">
-          <div className="mr-4">
-            <div className="text-2xl font-bold text-primary">$990</div>
-            <div className="text-sm text-gray-500">one-time payment</div>
+      <div className="rounded-lg border bg-white p-6">
+        <h2 className="mb-4 text-xl font-bold">Payment</h2>
+        <div className="space-y-4">
+          <div className="rounded-lg border border-yellow-100 bg-yellow-50 p-4">
+            <h3 className="mb-2 font-medium">Payment Schedule:</h3>
+            <ul className="list-disc space-y-1 pl-5 text-gray-600">
+              <li>
+                <strong>50% Deposit ($495)</strong> - Required upfront to begin
+                the project
+              </li>
+              <li>
+                <strong>50% Final Payment ($495)</strong> - Due upon your
+                approval, before the page goes live
+              </li>
+            </ul>
           </div>
-          <div className="text-sm text-gray-500">
-            Includes everything mentioned in the landing page package
+
+          <p className="text-gray-500">
+            After submitting this form, we&apos;ll send you an invoice for the
+            initial 50% deposit ($495). Once we receive your payment, we&apos;ll
+            begin work on your landing page.
+          </p>
+
+          <div className="bg-primary/5 flex items-center rounded-lg p-4">
+            <div className="mr-4">
+              <div className="text-primary text-2xl font-bold">$990</div>
+              <div className="text-sm text-gray-500">total project cost</div>
+            </div>
+            <div className="text-sm text-gray-500">
+              Includes everything mentioned in the landing page package
+            </div>
           </div>
         </div>
       </div>

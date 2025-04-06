@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="fixed top-0 z-100 w-full border-b bg-white">
+        <header className="border-b">
           <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
             <Link href="/" className="text-xl font-bold">
               Web Studio
@@ -75,6 +75,14 @@ export default function RootLayout({
                       className="hover:text-primary text-gray-500"
                     >
                       Order Now
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/faq"
+                      className="hover:text-primary text-gray-500"
+                    >
+                      FAQ
                     </Link>
                   </li>
                 </ul>
