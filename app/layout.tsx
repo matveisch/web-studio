@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -20,12 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="border-b">
+        <header className="border-b fixed top-0 bg-white w-full z-100">
           <div className="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <Link href="/" className="font-bold text-xl">
               Web Studio
             </Link>
-            <nav className="space-x-6">
+            <nav className="flex items-center space-x-6">
               <Link href="/" className="text-sm font-medium hover:text-primary">
                 Home
               </Link>
@@ -35,6 +36,9 @@ export default function RootLayout({
               >
                 Contact
               </Link>
+              <Button size="sm" asChild>
+                <Link href="/order">Order Now</Link>
+              </Button>
             </nav>
           </div>
         </header>

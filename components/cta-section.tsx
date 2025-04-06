@@ -63,7 +63,7 @@ export default function CTASection() {
                   asChild
                 >
                   <Link
-                    href="#order-form"
+                    href="/contact"
                     className="flex items-center justify-center gap-2"
                   >
                     Start Your Project for $990
@@ -73,7 +73,9 @@ export default function CTASection() {
 
                 <div className="text-sm text-gray-500 text-center md:text-left">
                   <p>No commitment required to get started.</p>
-                  <p>We'll discuss your project before any payment is made.</p>
+                  <p>
+                    We&apos;ll discuss your project before any payment is made.
+                  </p>
                 </div>
               </div>
             </div>

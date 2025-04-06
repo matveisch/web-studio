@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ExamplesShowcase() {
   const examples = [
@@ -119,12 +117,6 @@ export default function ExamplesShowcase() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <Button size="lg" asChild>
-            <Link href="#contact">Get Your Landing Page Today</Link>
-          </Button>
         </div>
       </div>
     </section>
