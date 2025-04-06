@@ -21,18 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="border-b fixed top-0 bg-white w-full z-100">
-          <div className="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-            <Link href="/" className="font-bold text-xl">
+        <header className="fixed top-0 z-100 w-full border-b bg-white">
+          <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
+            <Link href="/" className="text-xl font-bold">
               Web Studio
             </Link>
             <nav className="flex items-center space-x-6">
-              <Link href="/" className="text-sm font-medium hover:text-primary">
+              <Link href="/" className="hover:text-primary text-sm font-medium">
                 Home
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium hover:text-primary"
+                className="hover:text-primary text-sm font-medium"
               >
                 Contact
               </Link>
@@ -44,27 +44,27 @@ export default function RootLayout({
         </header>
         {children}
         <footer className="border-t bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
+          <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div>
-                <h3 className="font-bold mb-4">Web Studio</h3>
+                <h3 className="mb-4 font-bold">Web Studio</h3>
                 <p className="text-sm text-gray-500">
                   Professional landing pages for businesses of all sizes. Fixed
                   price, fast turnaround.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold mb-4">Quick Links</h3>
+                <h3 className="mb-4 font-bold">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="/" className="text-gray-500 hover:text-primary">
+                    <Link href="/" className="hover:text-primary text-gray-500">
                       Home
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/contact"
-                      className="text-gray-500 hover:text-primary"
+                      className="hover:text-primary text-gray-500"
                     >
                       Contact
                     </Link>
@@ -72,7 +72,7 @@ export default function RootLayout({
                   <li>
                     <Link
                       href="/order"
-                      className="text-gray-500 hover:text-primary"
+                      className="hover:text-primary text-gray-500"
                     >
                       Order Now
                     </Link>
@@ -80,29 +80,29 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-4">Contact</h3>
+                <h3 className="mb-4 font-bold">Contact</h3>
                 <ul className="space-y-2 text-sm text-gray-500">
                   <li>hello@webstudio.com</li>
                   <li>(555) 123-4567</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold mb-4">Legal</h3>
+                <h3 className="mb-4 font-bold">Legal</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="#" className="text-gray-500 hover:text-primary">
+                    <Link href="#" className="hover:text-primary text-gray-500">
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="text-gray-500 hover:text-primary">
+                    <Link href="#" className="hover:text-primary text-gray-500">
                       Terms of Service
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
+            <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
               <p>
                 © {new Date().getFullYear()} Web Studio. All rights reserved.
               </p>

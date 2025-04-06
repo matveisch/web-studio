@@ -1,8 +1,12 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-12 pt-24 md:py-24 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-white py-12 md:py-24 lg:py-32">
       <div className="relative z-10 px-4 md:px-6">
         <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4">
@@ -15,14 +19,14 @@ export default function HeroSection() {
                 in as little as 3 weeks.
               </p>
             </div>
-            {/* <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Button className="px-8 py-6 text-lg" asChild>
-                <Link href="#examples" className="flex items-center gap-2">
-                  View the Landing Page Package
+                <Link href="/contact" className="flex items-center gap-2">
+                  Start Your Project Today
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

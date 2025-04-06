@@ -8,7 +8,7 @@ import WhatsIncluded from "@/components/whats-included";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between pt-16">
       <HeroSection />
       <ProblemSolution />
       <WhatsIncluded />
