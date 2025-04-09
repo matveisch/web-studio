@@ -34,7 +34,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-lg font-medium mb-2">Message Sent!</h3>
         <p className="text-gray-500">
-          Thanks for reaching out. We'll get back to you within 1 business day.
+          Thanks for reaching out. We&apos;ll get back to you within 1 business day.
         </p>
       </div>
     );
