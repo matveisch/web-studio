@@ -1,3 +1,4 @@
+import LanguageSwitcher from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -26,20 +27,27 @@ export default function RootLayout({
             <Link href="/" className="text-xl font-bold">
               Web Studio
             </Link>
-            <nav className="flex items-center space-x-6">
-              <Link href="/" className="hover:text-primary text-sm font-medium">
-                Home
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:text-primary text-sm font-medium"
-              >
-                Contact
-              </Link>
-              <Button size="sm" asChild>
-                <Link href="/order">Order Now</Link>
-              </Button>
-            </nav>
+            <div className="flex items-center gap-4">
+              <nav className="flex items-center space-x-6">
+                <Link
+                  href="/"
+                  className="hover:text-primary text-sm font-medium"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary text-sm font-medium"
+                >
+                  Contact
+                </Link>
+                <LanguageSwitcher />
+
+                <Button size="sm" asChild>
+                  <Link href="/order">Order Now</Link>
+                </Button>
+              </nav>
+            </div>
           </div>
         </header>
         {children}
