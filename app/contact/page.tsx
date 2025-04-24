@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen flex-col pt-16">
+    <main className="flex min-h-screen flex-col">
       {/* Header */}
       <div className="bg-primary/5 py-8 md:py-12">
         <div className="px-4 md:px-6">
