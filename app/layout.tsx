@@ -9,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Web Studio - Professional Landing Pages for $990",
+  title: "Swift Desight - Professional Landing Pages for $990",
   description:
     "Get your professional, conversion-focused landing page for just $990. Fast 3-week turnaround and expert design.",
 };
@@ -25,7 +25,7 @@ export default function RootLayout({
         <header className="border-b">
           <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
             <Link href="/" className="text-xl font-bold">
-              Web Studio
+              Swift Desight
             </Link>
             <div className="flex items-center gap-4">
               <nav className="flex items-center space-x-6">
@@ -55,7 +55,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div>
-                <h3 className="mb-4 font-bold">Web Studio</h3>
+                <h3 className="mb-4 font-bold">Swift Desight</h3>
                 <p className="text-sm text-gray-500">
                   Professional landing pages for businesses of all sizes. Fixed
                   price, fast turnaround.
@@ -98,8 +98,8 @@ export default function RootLayout({
               <div>
                 <h3 className="mb-4 font-bold">Contact</h3>
                 <ul className="space-y-2 text-sm text-gray-500">
-                  <li>hello@webstudio.com</li>
-                  <li>(555) 123-4567</li>
+                  <li>support@desight.co</li>
+                  {/* <li>(555) 123-4567</li> */}
                 </ul>
               </div>
               <div>
@@ -120,7 +120,8 @@ export default function RootLayout({
             </div>
             <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
               <p>
-                © {new Date().getFullYear()} Web Studio. All rights reserved.
+                © {new Date().getFullYear()} Swift Desight. All rights
+                reserved.
               </p>
             </div>
           </div>
