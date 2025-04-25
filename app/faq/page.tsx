@@ -7,6 +7,19 @@ import {
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ | Affordable $990 Landing Page | Fast Website Design",
+  description:
+    "Frequently asked questions about our affordable $990 landing page package with fast 3-week turnaround time.",
+  keywords: [
+    "affordable landing page FAQ",
+    "fast website design questions",
+    "$990 landing page details",
+  ],
+};
+
 export default function FAQPage() {
   return (
     <main className="flex min-h-screen flex-col">
@@ -24,8 +37,8 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-4 max-w-3xl text-xl text-gray-500">
-            Here are answers to common questions about our $990 Landing Page
-            offer.
+            Here are answers to common questions about our affordable $990
+            Landing Page with fast website design.
           </p>
         </div>
       </div>
@@ -35,7 +48,7 @@ export default function FAQPage() {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="rounded-lg border px-6">
               <AccordionTrigger className="py-4 text-lg font-medium">
-                What exactly can I customize on the landing page?
+                What exactly can I customize on the affordable landing page?
               </AccordionTrigger>
               <AccordionContent className="pb-4 text-gray-500">
                 <p>
@@ -44,8 +57,8 @@ export default function FAQPage() {
                   Google Fonts), and background images. You also dictate the
                   order of the different content sections on the page. We build
                   each page custom for you – there are no restrictive templates.
-                  You&apos;ll also provide specific images like your logo or product
-                  photos to be included.
+                  You&apos;ll also provide specific images like your logo or
+                  product photos to be included.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -59,9 +72,9 @@ export default function FAQPage() {
                   You will need to provide essential information specific to
                   your needs, such as your contact details, company logo, and
                   any specific images you want featured. For the main text
-                  sections (headlines, descriptions, etc.), if you don&apos;t have
-                  final copy ready, we can use well-structured placeholder text
-                  to build the page. However, please note (as explained in
+                  sections (headlines, descriptions, etc.), if you don&apos;t
+                  have final copy ready, we can use well-structured placeholder
+                  text to build the page. However, please note (as explained in
                   question 4) that updating this text later requires coding
                   assistance unless arranged differently beforehand. We can use
                   icons and placeholder images where needed, which you would
@@ -72,7 +85,7 @@ export default function FAQPage() {
 
             <AccordionItem value="item-3" className="rounded-lg border px-6">
               <AccordionTrigger className="py-4 text-lg font-medium">
-                Is hosting or a domain name included?
+                Is hosting or a domain name included in the $990 price?
               </AccordionTrigger>
               <AccordionContent className="pb-4 text-gray-500">
                 <ul className="list-disc space-y-2 pl-5">
@@ -86,9 +99,10 @@ export default function FAQPage() {
                     <strong>Hosting:</strong> We provide complimentary basic
                     hosting for your landing page initially. This hosting is
                     suitable for typical landing page traffic levels. If your
-                    page&apos;s traffic grows significantly and requires more server
-                    resources, we will discuss transitioning to a standard paid
-                    hosting plan with you and can assist in setting that up.
+                    page&apos;s traffic grows significantly and requires more
+                    server resources, we will discuss transitioning to a
+                    standard paid hosting plan with you and can assist in
+                    setting that up.
                   </li>
                 </ul>
               </AccordionContent>
@@ -108,13 +122,13 @@ export default function FAQPage() {
                   we can provide a quote for the work involved.
                 </p>
                 <p>
-                  <strong>Exception:</strong> If you know beforehand that you&apos;ll
-                  need to frequently update specific sections yourself (like
-                  portfolio images or promotional banners), please discuss this
-                  with us <em>before</em> the project starts. We can potentially
-                  build those specific parts using a different method that
-                  allows easier updates, which might affect the project scope
-                  and cost.
+                  <strong>Exception:</strong> If you know beforehand that
+                  you&apos;ll need to frequently update specific sections
+                  yourself (like portfolio images or promotional banners),
+                  please discuss this with us <em>before</em> the project
+                  starts. We can potentially build those specific parts using a
+                  different method that allows easier updates, which might
+                  affect the project scope and cost.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -144,8 +158,8 @@ export default function FAQPage() {
                   This offer is specifically for a single landing page. If you
                   decide later that you need a full multi-page website or
                   additional features (like a blog, e-commerce, or booking
-                  system), we&apos;d be happy to discuss that as a separate project
-                  and provide a new quote based on your requirements.
+                  system), we&apos;d be happy to discuss that as a separate
+                  project and provide a new quote based on your requirements.
                 </p>
               </AccordionContent>
             </AccordionItem>

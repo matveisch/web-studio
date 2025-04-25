@@ -5,37 +5,38 @@ import Link from "next/link";
 export default function OrderSection() {
   return (
     <div className="bg-primary/5 rounded-xl p-8">
-      <h2 className="text-2xl font-bold mb-6">Ready to Order?</h2>
-      <p className="text-gray-500 mb-6">
-        Start your landing page project today and get your professional page
-        live in as little as 3 weeks.
+      <h2 className="mb-6 text-2xl font-bold">Ready to Order?</h2>
+      <p className="mb-6 text-gray-500">
+        Start your affordable landing page project today and get your
+        professional page live in as little as 3 weeks with our fast website
+        design service.
       </p>
 
-      <div className="bg-white rounded-lg p-6 shadow-sm mb-8">
-        <div className="flex items-center justify-between mb-4">
+      <div className="mb-8 rounded-lg bg-white p-6 shadow-sm">
+        <div className="mb-4 flex items-center justify-between">
           <h3 className="text-xl font-bold">Landing Page Package</h3>
-          <div className="text-2xl font-bold text-primary">$990</div>
+          <div className="text-primary text-2xl font-bold">$990</div>
         </div>
 
-        <ul className="space-y-3 mb-6">
+        <ul className="mb-6 space-y-3">
           <li className="flex items-start">
-            <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+            <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
             <span>Expert-designed, conversion-focused layout</span>
           </li>
           <li className="flex items-start">
-            <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+            <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
             <span>Mobile & desktop responsive design</span>
           </li>
           <li className="flex items-start">
-            <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+            <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
             <span>Your branding integration</span>
           </li>
           <li className="flex items-start">
-            <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+            <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
             <span>Contact/lead form integration</span>
           </li>
           <li className="flex items-start">
-            <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+            <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500" />
             <span>Basic SEO setup</span>
           </li>
         </ul>
@@ -51,9 +52,9 @@ export default function OrderSection() {
         </Button>
       </div>
 
-      <div className="bg-white rounded-lg p-6">
-        <h3 className="font-semibold mb-4">What happens after you order:</h3>
-        <ol className="space-y-3 list-decimal pl-5">
+      <div className="rounded-lg bg-white p-6">
+        <h3 className="mb-4 font-semibold">What happens after you order:</h3>
+        <ol className="list-decimal space-y-3 pl-5">
           <li>
             You&apos;ll receive an email with our onboarding questionnaire
           </li>
