@@ -1,6 +1,13 @@
 import OrderForm from "@/components/order-form";
 import { ArrowLeft } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Order Your $990 Landing Page | Fast Website Design",
+  description:
+    "Order your affordable landing page for just $990. Fast website design with 3-week turnaround. Start your project today.",
+};
 
 export default function OrderPage() {
   return (
@@ -16,11 +23,11 @@ export default function OrderPage() {
             Back to Contact
           </Link>
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Order Your Landing Page
+            Order Your $990 Landing Page
           </h1>
           <p className="mt-4 max-w-3xl text-xl text-gray-500">
-            Complete this form to start your landing page project. We&apos;ll be
-            in touch within 1 business day to confirm details.
+            Complete this form to start your affordable landing page project.
+            Our fast website design process ensures delivery in just 3 weeks.
           </p>
         </div>
       </div>

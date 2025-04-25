@@ -12,11 +12,11 @@ export default function HeroSection() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                Get Your Professional Landing Page for $990
+                Affordable Landing Page for Just $990
               </h1>
               <p className="text-gray-500 md:text-xl">
                 Our expert-designed template, customized with your brand, live
-                in as little as 3 weeks.
+                in as little as 3 weeks. Fast website design that converts.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -36,7 +36,7 @@ export default function HeroSection() {
         <div className="relative h-full w-full">
           <Image
             src="/visual.png"
-            alt="Landing page template mockup showing desktop and mobile versions"
+            alt="Affordable landing page template mockup showing desktop and mobile versions"
             fill
             className="object-cover"
             priority
@@ -53,7 +53,7 @@ export default function HeroSection() {
       <div className="relative mt-8 h-[400px] w-full lg:hidden">
         <Image
           src="/visual.png"
-          alt="Landing page template mockup showing desktop and mobile versions"
+          alt="Affordable landing page template mockup showing desktop and mobile versions"
           fill
           className="rounded-lg object-cover md:object-contain"
           priority

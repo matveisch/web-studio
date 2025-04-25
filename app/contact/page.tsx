@@ -1,8 +1,16 @@
 import ContactForm from "@/components/contact-form";
 import OrderSection from "@/components/order-section";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, MessageCircle } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Contact Us | Affordable $990 Landing Page Design | Fast Website Design",
+  description:
+    "Get in touch to start your affordable landing page project. Fast website design with 3-week turnaround for just $990.",
+};
 
 export default function ContactPage() {
   return (
@@ -18,11 +26,12 @@ export default function ContactPage() {
             Back to Home
           </Link>
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Get Started with Your Landing Page
+            Get Started with Your Affordable Landing Page
           </h1>
           <p className="mt-4 max-w-3xl text-xl text-gray-500">
             Have questions or ready to order? We&apos;re here to help you get
-            your professional landing page up and running.
+            your professional $990 landing page up and running with our fast
+            website design service.
           </p>
         </div>
       </div>
@@ -34,8 +43,8 @@ export default function ContactPage() {
             <h2 className="mb-6 text-2xl font-bold">Have Questions?</h2>
             <p className="mb-8 text-gray-500">
               Fill out this simple form if you have pre-sale questions about our
-              landing page package. We&apos;ll get back to you within 1 business
-              day.
+              affordable $990 landing page package. We&apos;ll get back to you
+              within 1 business day.
             </p>
 
             <ContactForm />
@@ -60,14 +69,14 @@ export default function ContactPage() {
                   (555) 123-4567
                 </a>
               </div> */}
-              <div>
+              {/* <div>
                 <Button
                   variant="outline"
                   className="flex items-center gap-2 border-0 bg-[#25D366] text-white hover:bg-[#128C7E]"
                   asChild
                 >
                   <a
-                    href={`https://wa.me/15551234567`}
+                    href={`https://wa.me/0`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -75,7 +84,7 @@ export default function ContactPage() {
                     Chat on WhatsApp
                   </a>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
 
