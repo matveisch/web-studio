@@ -1,7 +1,6 @@
 import ContactForm from "@/components/contact-form";
 import OrderSection from "@/components/order-section";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Mail, MessageCircle } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -60,14 +59,14 @@ export default function ContactPage() {
                   (555) 123-4567
                 </a>
               </div> */}
-              <div>
+              {/* <div>
                 <Button
                   variant="outline"
                   className="flex items-center gap-2 border-0 bg-[#25D366] text-white hover:bg-[#128C7E]"
                   asChild
                 >
                   <a
-                    href={`https://wa.me/+972546200783`}
+                    href={`https://wa.me/0`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -75,7 +74,7 @@ export default function ContactPage() {
                     Chat on WhatsApp
                   </a>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
 
