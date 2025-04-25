@@ -29,9 +29,9 @@ export default function ContactPage() {
             Get Started with Your Affordable Landing Page
           </h1>
           <p className="mt-4 max-w-3xl text-xl text-gray-500">
-            Have questions or ready to order? We're here to help you get your
-            professional $990 landing page up and running with our fast website
-            design service.
+            Have questions or ready to order? We&apos;re here to help you get
+            your professional $990 landing page up and running with our fast
+            website design service.
           </p>
         </div>
       </div>
@@ -43,8 +43,8 @@ export default function ContactPage() {
             <h2 className="mb-6 text-2xl font-bold">Have Questions?</h2>
             <p className="mb-8 text-gray-500">
               Fill out this simple form if you have pre-sale questions about our
-              affordable $990 landing page package. We'll get back to you within
-              1 business day.
+              affordable $990 landing page package. We&apos;ll get back to you
+              within 1 business day.
             </p>
 
             <ContactForm />
