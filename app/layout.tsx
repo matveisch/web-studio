@@ -2,6 +2,7 @@ import LanguageSwitcher from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import type React from "react";
 import "./globals.css";
@@ -24,7 +25,16 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="border-b">
           <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
-            <Link href="/" className="text-xl font-bold">
+            <Link
+              href="/"
+              className="flex items-center gap-1.5 text-xl font-bold"
+            >
+              <Image
+                src="/logo.png"
+                alt="Swift Desight Logo"
+                width={32}
+                height={32}
+              />
               Swift Desight
             </Link>
             <div className="flex items-center gap-4">
