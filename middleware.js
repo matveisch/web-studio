@@ -20,14 +20,11 @@ export function middleware(request) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale || pathname === "/") return;
 
-  // // Redirect if there is no locale
-  // const locale = getLocale(request);
-  // request.nextUrl.pathname = `/${locale}${pathname}`;
-  // // e.g. incoming request is /products
-  // // The new URL is now /en-US/products
-  // return NextResponse.redirect(request.nextUrl);
+  // Redirect to the preferred locale if no locale is found in the pathname
+  const preferredLocale = getLocale(request);
+  return Response.redirect(`${request.nextUrl.origin}/${preferredLocale}`, 307);
 }
 
 export const config = {
