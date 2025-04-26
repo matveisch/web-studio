@@ -6,7 +6,7 @@ export default async function Page({
   params: Promise<{ lang: "he" }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang); // he
+  const dict = await getDictionary(lang);
 
-  return <button>{dict.products.cart}</button>; // Add to Cart
+  return <button>hello</button>; // Add to Cart
 }
