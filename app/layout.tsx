@@ -1,9 +1,7 @@
-import LanguageSwitcher from "@/components/language-switcher";
-import { Button } from "@/components/ui/button";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
 import Script from "next/script";
 import type React from "react";
 import "./globals.css";
@@ -45,7 +43,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -76,119 +74,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        <header className="border-b">
-          <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
-            <Link
-              href="/"
-              className="flex items-center gap-1.5 text-xl font-bold"
-            >
-              <Image
-                src="/logo.png"
-                alt="Swift Desight Logo"
-                width={32}
-                height={32}
-              />
-              Swift Desight
-            </Link>
-            <div className="flex items-center gap-4">
-              <nav className="flex items-center space-x-6">
-                <Link
-                  href="/"
-                  className="hover:text-primary text-sm font-medium"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/contact"
-                  className="hover:text-primary text-sm font-medium"
-                >
-                  Contact
-                </Link>
-                <LanguageSwitcher />
-
-                <Button size="sm" asChild>
-                  <Link href="/order">Order Now</Link>
-                </Button>
-              </nav>
-            </div>
-          </div>
-        </header>
+        // todo as i get it the only thing to do is to put header and footer components into each page
+        <Header lang="en" />
         {children}
-        <footer className="border-t bg-gray-50">
-          <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div>
-                <h3 className="mb-4 font-bold">Swift Desight</h3>
-                <p className="text-sm text-gray-500">
-                  Professional affordable landing pages for businesses of all
-                  sizes. Fixed $990 price, fast turnaround.
-                </p>
-              </div>
-              <div>
-                <h3 className="mb-4 font-bold">Quick Links</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <Link href="/" className="hover:text-primary text-gray-500">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="hover:text-primary text-gray-500"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/order"
-                      className="hover:text-primary text-gray-500"
-                    >
-                      Order Now
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/faq"
-                      className="hover:text-primary text-gray-500"
-                    >
-                      FAQ
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="mb-4 font-bold">Contact</h3>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li>support@desight.co</li>
-                  {/* <li>(555) 123-4567</li> */}
-                </ul>
-              </div>
-              <div>
-                <h3 className="mb-4 font-bold">Legal</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <Link href="#" className="hover:text-primary text-gray-500">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-primary text-gray-500">
-                      Terms of Service
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
-              <p>
-                © {new Date().getFullYear()} Swift Desight. All rights
-                reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer lang="en" />
       </body>
     </html>
   );
