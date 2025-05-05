@@ -157,5 +157,46 @@
         "text": "We help you get it live or provide the files."
       }
     }
+  },
+  "examplesShowcase": {
+    "headline": "Examples of Our Work",
+    "subheadline": "See what your $990 landing page could look like",
+    "imageAltDesktop": "{title} desktop view",
+    "imageAltMobile": "{title} mobile view",
+    "examples": {
+      "example1": {
+        "title": "Local Bakery",
+        "description": "A mouth-watering landing page for a local bakery that showcases their artisanal products and drives in-store visits.",
+        "desktopImage": "/bakery-desktop.png",
+        "mobileImage": "/bakery-mobile.png",
+        "benefits": [
+          "Menu showcase with beautiful imagery",
+          "Easy location and hours information",
+          "Online order form for special requests"
+        ]
+      },
+      "example2": {
+        "title": "Fitness Challenge",
+        "description": "An energetic, motivational landing page for a 30-day fitness challenge program with clear sign-up process.",
+        "desktopImage": "/fitness-desktop.png",
+        "mobileImage": "/fitness-mobile.png",
+        "benefits": [
+          "Personalized workout plan previews",
+          "Community forum access for support and motivation",
+          "Simple registration process with payment integration"
+        ]
+      },
+      "example3": {
+        "title": "Educational Blog",
+        "description": "A clean, content-focused landing page for an educational blog that highlights key articles and encourages subscriptions.",
+        "desktopImage": "/blog-desktop.png",
+        "mobileImage": "/blog-mobile.png",
+        "benefits": [
+          "Categorized article previews with featured images",
+          "Category and tag system",
+          "Email newsletter subscription form"
+        ]
+      }
+    }
   }
 }

@@ -1,122 +1,149 @@
 import Image from "next/image";
 
-export default function ExamplesShowcase() {
-  const examples = [
-    {
-      id: 1,
-      title: "Local Bakery",
-      description:
-        "A mouth-watering landing page for a local bakery that showcases their artisanal products and drives in-store visits.",
-      desktopImage: "/bakery-desktop.png",
-      mobileImage: "/bakery-mobile.png",
-      benefits: [
-        "Menu showcase with beautiful imagery",
-        "Easy location and hours information",
-        "Online order form for special requests",
-      ],
-    },
-    {
-      id: 2,
-      title: "Fitness Challenge",
-      description:
-        "An energetic, motivational landing page for a 30-day fitness challenge program with clear sign-up process.",
-      desktopImage: "/fitness-desktop.png",
-      mobileImage: "/fitness-mobile.png",
-      benefits: [
-        "Personalized workout plan previews",
-        "Community forum access for support and motivation",
-        "Simple registration process with payment integration",
-      ],
-    },
-    {
-      id: 3,
-      title: "Educational Blog",
-      description:
-        "A clean, content-focused landing page for an educational blog that highlights key articles and encourages subscriptions.",
-      desktopImage: "/blog-desktop.png",
-      mobileImage: "/blog-mobile.png",
-      benefits: [
-        "Categorized article previews with featured images",
-        "Category and tag system",
-        "Email newsletter subscription form",
-      ],
-    },
-  ];
+// Define the expected dictionary structure for this component
+interface Dictionary {
+  examplesShowcase: {
+    headline: string;
+    subheadline: string;
+    imageAltDesktop: string; // Alt text pattern
+    imageAltMobile: string; // Alt text pattern
+    examples: {
+      // Explicitly define the known keys here
+      example1: {
+        title: string;
+        description: string;
+        desktopImage: string;
+        mobileImage: string;
+        benefits: string[];
+      };
+      example2: {
+        title: string;
+        description: string;
+        desktopImage: string;
+        mobileImage: string;
+        benefits: string[];
+      };
+      example3: {
+        title: string;
+        description: string;
+        desktopImage: string;
+        mobileImage: string;
+        benefits: string[];
+      };
+      // Add index signature if you want to allow any string key (less strict)
+      // [key: string]: { ... }; // <-- Optional, if your structure might have unknown keys
+    };
+  };
+}
+
+interface ExamplesShowcaseProps {
+  dict: Dictionary;
+}
+
+// Get the specific literal types of the example keys ('example1' | 'example2' | ...)
+type ExampleKey = keyof Dictionary["examplesShowcase"]["examples"];
+
+export default function ExamplesShowcase({ dict }: ExamplesShowcaseProps) {
+  // Get the keys for the examples (e.g., 'example1', 'example2', 'example3')
+  const exampleKeys = Object.keys(
+    dict.examplesShowcase.examples,
+  ) as ExampleKey[]; // Assert the type of the array
 
   return (
     <section
-      className="w-full py-12 md:py-24 bg-white overflow-hidden"
+      className="w-full overflow-hidden bg-white py-12 md:py-24"
       id="examples"
     >
       <div className="px-4 md:px-6">
-        <div className="text-center mb-10 md:mb-16">
+        <div className="mb-10 text-center md:mb-16">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-            Examples of Our Work
+            {dict.examplesShowcase.headline}
           </h2>
-          <p className="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">
-            See what your $990 landing page could look like
+          <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-500">
+            {dict.examplesShowcase.subheadline}
           </p>
         </div>
 
         <div className="space-y-16 md:space-y-24">
-          {examples.map((example) => (
-            <div
-              key={example.id}
-              className="grid md:grid-cols-2 gap-8 items-center"
-            >
-              {/* Desktop & Mobile Preview - Always on the left for consistency */}
-              <div className="relative">
-                {/* Desktop Preview */}
-                <div className="relative rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                  <Image
-                    src={example.desktopImage || "/placeholder.svg"}
-                    alt={`${example.title} desktop view`}
-                    width={1200}
-                    height={600}
-                    className="w-full h-auto"
-                  />
+          {/* Map over the example keys to get data from the dictionary */}
+          {/* exampleKey is already asserted as ExampleKey by asserting the array type */}
+          {exampleKeys.map((exampleKey, index) => {
+            // No assertion needed here if the array was asserted above
+            const example = dict.examplesShowcase.examples[exampleKey];
+
+            // Generate alt text using the translated pattern and example title
+            const desktopAlt = dict.examplesShowcase.imageAltDesktop.replace(
+              "{title}",
+              example.title,
+            );
+            const mobileAlt = dict.examplesShowcase.imageAltMobile.replace(
+              "{title}",
+              example.title,
+            );
+
+            return (
+              // Using exampleKey as the key for React list rendering
+              <div
+                key={exampleKey}
+                className="grid items-center gap-8 md:grid-cols-2"
+              >
+                {/* Desktop & Mobile Preview - Always on the left for consistency */}
+                <div className="relative">
+                  {/* Desktop Preview */}
+                  <div className="relative overflow-hidden rounded-lg border border-gray-200 shadow-lg">
+                    <Image
+                      src={example.desktopImage || "/placeholder.svg"}
+                      alt={desktopAlt} // Use dynamic alt text
+                      width={1200}
+                      height={600}
+                      className="h-auto w-full"
+                      priority={index === 0} // Prioritize the first image
+                    />
+                  </div>
+
+                  {/* Mobile Preview - Positioned to overlap */}
+                  <div className="absolute -bottom-10 w-1/4 overflow-hidden rounded-lg border-4 border-white shadow-lg ltr:-right-5 rtl:-left-5">
+                    <Image
+                      src={example.mobileImage || "/placeholder.svg"}
+                      alt={mobileAlt} // Use dynamic alt text
+                      width={400}
+                      height={800}
+                      className="h-auto w-full"
+                    />
+                  </div>
                 </div>
 
-                {/* Mobile Preview - Positioned to overlap */}
-                <div className="absolute -bottom-10 -right-5 w-1/4 rounded-lg overflow-hidden shadow-lg border-4 border-white">
-                  <Image
-                    src={example.mobileImage || "/placeholder.svg"}
-                    alt={`${example.title} mobile view`}
-                    width={400}
-                    height={800}
-                    className="w-full h-auto"
-                  />
+                {/* Description */}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold">{example.title}</h3>
+                  <p className="text-gray-500">{example.description}</p>
+                  <ul className="space-y-2">
+                    {/* Map over the benefits array from the dictionary */}
+                    {example.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-100">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-green-600"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <span>{benefit}</span>
+                        {/* Benefit text from dictionary */}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-
-              {/* Description */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{example.title}</h3>
-                <p className="text-gray-500">{example.description}</p>
-                <ul className="space-y-2">
-                  {example.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-center">
-                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mr-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-green-600"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import ExamplesShowcase from "@/components/examples-showcase";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/how-it-works";
 import ProblemSolution from "@/components/problem-solution";
@@ -58,7 +59,8 @@ export default async function Home({
         <ProblemSolution lang={lang} />
         <WhatsIncluded lang={lang} />
         <HowItWorks lang={lang} />
-        {/* <HowItWorks />
+        <ExamplesShowcase dict={dict} />
+        {/* 
         <ExamplesShowcase />
         <TurnaroundTime />
         <CTASection /> */}
