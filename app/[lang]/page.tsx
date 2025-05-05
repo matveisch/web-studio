@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero-section";
+import HowItWorks from "@/components/how-it-works";
 import ProblemSolution from "@/components/problem-solution";
 import WhatsIncluded from "@/components/whats-included";
 import Script from "next/script";
@@ -56,6 +57,11 @@ export default async function Home({
         <HeroSection lang={lang} />
         <ProblemSolution lang={lang} />
         <WhatsIncluded lang={lang} />
+        <HowItWorks lang={lang} />
+        {/* <HowItWorks />
+        <ExamplesShowcase />
+        <TurnaroundTime />
+        <CTASection /> */}
       </main>
     </> // Add to Cart
   );

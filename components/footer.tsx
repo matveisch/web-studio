@@ -73,12 +73,8 @@ export default async function Footer({ lang }: { lang: "he" | "en" }) {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
-          <p>
-            {/* Use dictionary and replace placeholder */}
-            {dict.layout.footer.copyright.replace(
-              "{{year}}",
-              new Date().getFullYear().toString(),
-            )}
+          <p dir="ltr">
+            © {new Date().getFullYear()} Swift Desight. All rights reserved.
           </p>
         </div>
       </div>
