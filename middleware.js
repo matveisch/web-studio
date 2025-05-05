@@ -1,4 +1,4 @@
-let locales = ["he"];
+let locales = ["en", "he"];
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request) {
@@ -20,7 +20,9 @@ export function middleware(request) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
-  if (pathnameHasLocale || pathname === "/") return;
+  if (pathnameHasLocale) {
+    return;
+  }
 
   // Redirect to the preferred locale if no locale is found in the pathname
   const preferredLocale = getLocale(request);

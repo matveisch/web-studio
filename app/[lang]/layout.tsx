@@ -2,12 +2,13 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import "../globals.css";
 import { getDictionary } from "./dictionaries";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: "he" }>;
+  params: Promise<{ lang: "he" | "en" }>;
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);

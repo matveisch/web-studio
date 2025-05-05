@@ -47,5 +47,51 @@
       },
       "copyright": "© {{year}} Swift Desight. All rights reserved."
     }
+  },
+  "hero": {
+    "headline": "Affordable Landing Page for Just $990",
+    "subheadline": "Our expert-designed template, customized with your brand, live in as little as 3 weeks. Fast website design that converts.",
+    "ctaButton": "Start Your Project Today",
+    "imageAlt": "Affordable landing page template mockup showing desktop and mobile versions",
+    "readyInLabel": "Ready in",
+    "readyInValue": "3 Weeks"
+  },
+  "home": {
+    "metadataDescription": "Get your professional, affordable landing page for just $990. Fast website design with 3-week turnaround and expert design.",
+    "schema": {
+      "name": "Affordable Landing Page Design for $990",
+      "description": "Professional landing page design service with fast 3-week turnaround for just $990",
+      "serviceName": "Landing Page Design"
+    }
+  },
+  "problemSolution": {
+    "problemTitle": "The Problem",
+    "problemHeadline": "Why Most Businesses Struggle with Web Design",
+    "problem1": {
+      "title": "Too Expensive",
+      "description": "Custom websites often cost $5,000-$20,000+, putting them out of reach for many small businesses."
+    },
+    "problem2": {
+      "title": "Too Slow",
+      "description": "Traditional web design projects can take 2-6 months, delaying your ability to attract customers."
+    },
+    "problem3": {
+      "title": "Too Complicated",
+      "description": "Complex processes, endless revisions, and technical jargon make the experience frustrating."
+    },
+    "solutionTitle": "Our Solution",
+    "solutionHeadline": "The $990 Landing Page Package",
+    "solution1": {
+      "title": "Affordable Fixed Price",
+      "description": "One transparent price of $990 with no hidden fees or surprise costs."
+    },
+    "solution2": {
+      "title": "Fast 3-Week Turnaround",
+      "description": "Get your professional landing page live and generating leads in just 3 weeks."
+    },
+    "solution3": {
+      "title": "Simple, Streamlined Process",
+      "description": "Our proven template and clear process eliminates complexity and delivers results."
+    }
   }
 }
