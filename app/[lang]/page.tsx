@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section";
 import ProblemSolution from "@/components/problem-solution";
+import WhatsIncluded from "@/components/whats-included";
 import Script from "next/script";
 import { getDictionary } from "./dictionaries";
 
@@ -54,6 +55,7 @@ export default async function Home({
       <main className="flex min-h-screen flex-col items-center justify-between pt-16">
         <HeroSection lang={lang} />
         <ProblemSolution lang={lang} />
+        <WhatsIncluded lang={lang} />
       </main>
     </> // Add to Cart
   );

@@ -76,7 +76,7 @@ export default async function Footer({ lang }: { lang: "he" | "en" }) {
           <p>
             {/* Use dictionary and replace placeholder */}
             {dict.layout.footer.copyright.replace(
-              "{year}",
+              "{{year}}",
               new Date().getFullYear().toString(),
             )}
           </p>
