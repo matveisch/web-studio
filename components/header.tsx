@@ -25,7 +25,7 @@ export default async function Header({ lang }: { lang: "he" | "en" }) {
               {dict.layout.nav.home}
             </Link>
             <Link
-              href="/contact"
+              href={`/${lang}/contact`}
               className="hover:text-primary text-sm font-medium"
             >
               {dict.layout.nav.contact}

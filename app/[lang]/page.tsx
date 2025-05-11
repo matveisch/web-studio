@@ -64,10 +64,7 @@ export default async function Home({
         <ExamplesShowcase dict={dict} />
         <TurnaroundTime dict={dict} />
         <CTASection dict={dict} />
-        {/* 
-        <TurnaroundTime />
-        <CTASection /> */}
       </main>
-    </> // Add to Cart
+    </>
   );
 }
