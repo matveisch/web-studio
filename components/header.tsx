@@ -17,7 +17,7 @@ export default async function Header({ lang }: { lang: "he" | "en" }) {
             width={32}
             height={32}
           />
-          {dict.layout.siteName}
+          <h1 className="hidden sm:block">{dict.layout.siteName}</h1>
         </Link>
         <div className="flex items-center gap-4">
           <nav className="flex items-center space-x-6">
