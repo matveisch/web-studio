@@ -334,5 +334,85 @@
       "processing": "Processing...",
       "default": "Submit Order"
     }
+  },
+  "faqPage": {
+    "metadata": {
+      "title": "FAQ | Affordable $990 Landing Page | Fast Website Design",
+      "description": "Frequently asked questions about our affordable $990 landing page package with fast 3-week turnaround time.",
+      "keywords": [
+        "affordable landing page FAQ",
+        "fast website design questions",
+        "$990 landing page details"
+      ]
+    },
+    "backToHomeLink": "Back to Home",
+    "headline": "Frequently Asked Questions",
+    "description": "Here are answers to common questions about our affordable $990 Landing Page with fast website design.",
+    "questions": {
+      "item-1": {
+        "trigger": "What exactly can I customize on the affordable landing page?",
+        "content": [
+          "You have significant flexibility! You can choose your preferred colors, fonts (from standard web-safe options or Google Fonts), and background images. You also dictate the order of the different content sections on the page. We build each page custom for you – there are no restrictive templates. You'll also provide specific images like your logo or product photos to be included."
+        ]
+      },
+      "item-2": {
+        "trigger": "What content do I need to provide?",
+        "content": [
+          "You will need to provide essential information specific to your needs, such as your contact details, company logo, and any specific images you want featured. For the main text sections (headlines, descriptions, etc.), if you don't have final copy ready, we can use well-structured placeholder text to build the page. However, please note (as explained in question 4) that updating this text later requires coding assistance unless arranged differently beforehand. We can use icons and placeholder images where needed, which you would replace by providing your final images to us."
+        ]
+      },
+      "item-3": {
+        "trigger": "Is hosting or a domain name included in the $990 price?",
+        "content": [
+          "<strong>Domain Name:</strong> No, the domain name (e.g., www.yourcompany.com) is not included. You will need to purchase this yourself from a domain registrar. We can offer guidance on this process if needed.",
+          "<strong>Hosting:</strong> We provide complimentary basic hosting for your landing page initially. This hosting is suitable for typical landing page traffic levels. If your page's traffic grows significantly and requires more server resources, we will discuss transitioning to a standard paid hosting plan with you and can assist in setting that up."
+        ]
+      },
+      "item-4": {
+        "trigger": "Can I update the content myself later?",
+        "content": [
+          "Typically, no. The standard landing page is built using code (HTML/CSS/JS) for optimal performance and design flexibility. This means changes to text, images, or layout after the site is live require coding knowledge. Any updates needed after the project completion would be handled as a separate request, and we can provide a quote for the work involved.",
+          "<strong>Exception:</strong> If you know beforehand that you'll need to frequently update specific sections yourself (like portfolio images or promotional banners), please discuss this with us <em>before</em> the project starts. We can potentially build those specific parts using a different method that allows easier updates, which might affect the project scope and cost."
+        ]
+      },
+      "item-5": {
+        "trigger": "What is the estimated turnaround time?",
+        "content": [
+          "Our standard turnaround time is approximately 3 weeks, starting from when we receive the 50% deposit and all necessary content/information from you (like your logo, specific text, images, and customization choices). This timeline can be adjusted if the scope involves specific, complex requirements discussed beforehand."
+        ]
+      },
+      "item-6": {
+        "trigger": "What if I need more pages or features later?",
+        "content": [
+          "This offer is specifically for a single landing page. If you decide later that you need a full multi-page website or additional features (like a blog, e-commerce, or booking system), we'd be happy to discuss that as a separate project and provide a new quote based on your requirements."
+        ]
+      },
+      "item-7": {
+        "trigger": "What does 'Basic SEO' include?",
+        "content": [
+          "Our Basic SEO setup ensures your landing page is technically ready for search engines. This includes:",
+          "Setting up essential meta tags (like Title tags and Meta Descriptions) based on the content provided.",
+          "Ensuring the page structure uses appropriate header tags (H1, H2, etc.).",
+          "Submitting your landing page to Google for indexing.",
+          "Ensuring the page is mobile-friendly.",
+          "This service focuses on the technical on-page setup but does not include advanced SEO strategies like keyword research, link building, or ongoing content creation."
+        ]
+      },
+      "item-8": {
+        "trigger": "How many revisions are included?",
+        "content": [
+          "We include up to 5 rounds of revisions during the design and development phase. A revision round typically involves you providing feedback on the current draft, and us implementing those changes. We aim to get everything perfect within these rounds. If further changes are requested after these 5 rounds are exhausted, they will be quoted separately based on the extent of the requested changes."
+        ]
+      },
+      "item-9": {
+        "trigger": "What is the cost and how do I pay?",
+        "content": [
+          "<strong>Total Cost:</strong> $990 USD.",
+          "<strong>Payment Terms:</strong> We require a 50% deposit ($495) upfront to begin the project, with the remaining 50% ($495) due upon completion and your final approval, before the page goes live on your hosting/domain.",
+          "<strong>Payment Methods:</strong> We accept major credit/debit cards. If you are located locally, we may be able to arrange cash payment upon request."
+        ]
+      }
+    },
+    "footerNote": "FAQ as of {date}. Pricing and terms subject to change."
   }
 }

@@ -20,13 +20,16 @@ export default async function Footer({ lang }: { lang: "he" | "en" }) {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-primary text-gray-500">
+                <Link
+                  href={`/${lang}/`}
+                  className="hover:text-primary text-gray-500"
+                >
                   {dict.layout.footer.quickLinks.home}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href={`/${lang}/contact`}
                   className="hover:text-primary text-gray-500"
                 >
                   {dict.layout.footer.quickLinks.contact}
@@ -34,14 +37,17 @@ export default async function Footer({ lang }: { lang: "he" | "en" }) {
               </li>
               <li>
                 <Link
-                  href="/order"
+                  href={`/${lang}/order`}
                   className="hover:text-primary text-gray-500"
                 >
                   {dict.layout.footer.quickLinks.orderNow}
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-primary text-gray-500">
+                <Link
+                  href={`/${lang}/faq`}
+                  className="hover:text-primary text-gray-500"
+                >
                   {dict.layout.footer.quickLinks.faq}
                 </Link>
               </li>
