@@ -115,7 +115,7 @@ export default async function ContactPage({ params }: Props) {
           </div>
 
           {/* Order Section - assuming it handles its own text or receives dict */}
-          <OrderSection />
+          <OrderSection dict={dict} />
         </div>
       </div>
     </main>
