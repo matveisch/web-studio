@@ -198,5 +198,44 @@
         ]
       }
     }
+  },
+  "turnaroundTime": {
+    "headline": "Fast Turnaround Time",
+    "subheadline": "Get your professional landing page up and running quickly",
+    "mainContent": {
+      "title": "Up to 3 weeks from receiving your final content and preferences",
+      "description": "While most web design projects can take months, our streamlined process and focused approach allows us to deliver your landing page in as little as 3 weeks."
+    },
+    "weeksLabel": "WEEKS",
+    "timeline": {
+      "step1": {
+        "title": "Week 1",
+        "description": "Initial setup, content organization, and design planning based on your materials."
+      },
+      "step2": {
+        "title": "Week 2",
+        "description": "Design implementation, content integration, and functionality development."
+      },
+      "step3": {
+        "title": "Week 3",
+        "description": "Final review, refinements based on your feedback, and preparation for launch."
+      }
+    }
+  },
+  "ctaSection": {
+    "benefitsHeadline": "Why clients choose our affordable landing page package",
+    "benefits": [
+      "Fixed $990 price with no surprises or hidden fees",
+      "Fast 3-week turnaround with our quick website design process",
+      "Professional design optimized for conversions",
+      "Simple, streamlined process with clear communication",
+      "Mobile-responsive and SEO-friendly"
+    ],
+    "ctaHeadline": "Ready to launch your affordable landing page?",
+    "ctaDescription": "Get started today with our fast website design service and have your page live in as little as 3 weeks.",
+    "oneTimePaymentLabel": "one-time payment",
+    "ctaButton": "Start Your Project for $990",
+    "noCommitmentText": "No commitment required to get started.",
+    "discussionText": "We'll discuss your project before any payment is made."
   }
 }

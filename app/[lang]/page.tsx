@@ -1,7 +1,9 @@
+import CTASection from "@/components/cta-section";
 import ExamplesShowcase from "@/components/examples-showcase";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/how-it-works";
 import ProblemSolution from "@/components/problem-solution";
+import TurnaroundTime from "@/components/turnaround-time";
 import WhatsIncluded from "@/components/whats-included";
 import Script from "next/script";
 import { getDictionary } from "./dictionaries";
@@ -60,8 +62,9 @@ export default async function Home({
         <WhatsIncluded lang={lang} />
         <HowItWorks lang={lang} />
         <ExamplesShowcase dict={dict} />
+        <TurnaroundTime dict={dict} />
+        <CTASection dict={dict} />
         {/* 
-        <ExamplesShowcase />
         <TurnaroundTime />
         <CTASection /> */}
       </main>
