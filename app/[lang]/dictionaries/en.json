@@ -274,5 +274,65 @@
       "You'll review and we'll make any needed refinements",
       "Your page goes live!"
     ]
+  },
+  "orderPage": {
+    "metadata": {
+      "title": "Order Your $990 Landing Page | Fast Website Design",
+      "description": "Order your affordable landing page for just $990. Fast website design with 3-week turnaround. Start your project today."
+    },
+    "backToContactLink": "Back to Contact",
+    "headline": "Order Your $990 Landing Page",
+    "description": "Complete this form to start your affordable landing page project. Our fast website design process ensures delivery in just 3 weeks."
+  },
+  "orderForm": {
+    "success": {
+      "headline": "Order Received!",
+      "message": "Thanks for ordering your landing page. We'll be in touch within 1 business day to get started.",
+      "returnHomeButton": "Return to Home"
+    },
+    "yourInfo": {
+      "title": "Your Information",
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "First name",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Last name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone (optional)",
+      "companyLabel": "Company/Business Name",
+      "companyPlaceholder": "Your business name"
+    },
+    "projectDetails": {
+      "title": "Project Details",
+      "websiteLabel": "Current Website (if any)",
+      "typeLabel": "Landing Page Type",
+      "typeOptions": {
+        "business": "Business/Service",
+        "product": "Product",
+        "event": "Event",
+        "other": "Other"
+      },
+      "descriptionLabel": "Brief Description of Your Business/Project",
+      "descriptionPlaceholder": "Tell us a bit about your business and what you want to achieve with this landing page.",
+      "timelineLabel": "Desired Timeline",
+      "timelineOptions": {
+        "standard": "Standard (up to 3 weeks)",
+        "rush": "Rush (additional fee may apply)"
+      }
+    },
+    "payment": {
+      "title": "Payment",
+      "scheduleHeadline": "Payment Schedule:",
+      "scheduleItems": [
+        "<strong>50% Deposit ($495)</strong> - Required upfront to begin the project",
+        "<strong>50% Final Payment ($495)</strong> - Due upon your approval, before the page goes live"
+      ],
+      "submissionText": "After submitting this form, we'll send you an invoice for the initial 50% deposit ($495). Once we receive your payment, we'll begin work on your landing page.",
+      "totalCostLabel": "total project cost",
+      "includesText": "Includes everything mentioned in the landing page package"
+    },
+    "submitButton": {
+      "processing": "Processing...",
+      "default": "Submit Order"
+    }
   }
 }

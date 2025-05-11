@@ -10,7 +10,10 @@ export default async function Header({ lang }: { lang: "he" | "en" }) {
   return (
     <header className="border-b">
       <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
-        <Link href="/" className="flex items-center gap-1.5 text-xl font-bold">
+        <Link
+          href={`/${lang}`}
+          className="flex items-center gap-1.5 text-xl font-bold"
+        >
           <Image
             src="/logo.png"
             alt="Swift Desight Logo" // Kept as-is, common for logos
@@ -21,7 +24,10 @@ export default async function Header({ lang }: { lang: "he" | "en" }) {
         </Link>
         <div className="flex items-center gap-4">
           <nav className="flex items-center space-x-6">
-            <Link href="/" className="hover:text-primary text-sm font-medium">
+            <Link
+              href={`/${lang}`}
+              className="hover:text-primary text-sm font-medium"
+            >
               {dict.layout.nav.home}
             </Link>
             <Link
@@ -33,7 +39,9 @@ export default async function Header({ lang }: { lang: "he" | "en" }) {
             <LanguageSwitcher />
             {/* Assumes LanguageSwitcher handles its own text */}
             <Button size="sm" asChild>
-              <Link href="/order">{dict.layout.nav.orderNowButton}</Link>
+              <Link href={`/${lang}/order`}>
+                {dict.layout.nav.orderNowButton}
+              </Link>
             </Button>
           </nav>
         </div>
