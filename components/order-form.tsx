@@ -97,7 +97,7 @@ export default function OrderForm({
       <div className="rounded-lg border border-green-100 bg-green-50 p-8 text-center">
         <div className="mb-4 flex justify-center">
           <div className="rounded-full bg-green-100 p-3">
-            <CheckCircle className="h-8 w-8 text-green-600" />{" "}
+            <CheckCircle className="h-8 w-8 text-green-600" />
             {/* Icon kept as-is */}
           </div>
         </div>
@@ -158,7 +158,12 @@ export default function OrderForm({
 
           <div className="grid gap-2">
             <Label htmlFor="phone">{dict.orderForm.yourInfo.phoneLabel}</Label>
-            <Input id="phone" type="tel" placeholder="(555) 123-4567" />{" "}
+            <Input
+              id="phone"
+              type="tel"
+              placeholder="(555) 123-4567"
+              className="rtl:text-right"
+            />
             {/* Placeholder phone kept as-is */}
           </div>
 
@@ -292,12 +297,8 @@ export default function OrderForm({
           </p>
 
           <div className="bg-primary/5 flex items-center rounded-lg p-4">
-            <div className="mr-4">
-              <div className="text-primary text-2xl font-bold">$990</div>{" "}
-              {/* Price kept as-is */}
-              <div className="text-sm text-gray-500">
-                {dict.orderForm.payment.totalCostLabel}
-              </div>
+            <div className="mr-4 rtl:mr-0 rtl:ml-4">
+              <div className="text-primary text-2xl font-bold">$990</div>
             </div>
             <div className="text-sm text-gray-500">
               {dict.orderForm.payment.includesText}
