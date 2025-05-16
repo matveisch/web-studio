@@ -1,27 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://swift.desight.co/</loc>
-    <lastmod>2025-04-25</lastmod>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority> <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://swift.desight.co/en/"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="https://swift.desight.co/he/"
+    />
+  </url>
+
+  <url>
+    <loc>https://swift.desight.co/en/</loc>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="https://swift.desight.co/he/"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/"
+    />
   </url>
+
   <url>
-    <loc>https://swift.desight.co/contact</loc>
-    <lastmod>2025-04-25</lastmod>
+    <loc>https://swift.desight.co/he/</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://swift.desight.co/en/"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/"
+    />
+  </url>
+
+
+  <url>
+    <loc>https://swift.desight.co/en/contact</loc>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="https://swift.desight.co/he/contact"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/contact"
+    />
   </url>
+
   <url>
-    <loc>https://swift.desight.co/order</loc>
-    <lastmod>2025-04-25</lastmod>
+    <loc>https://swift.desight.co/he/contact</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://swift.desight.co/en/contact"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/contact"
+    />
+  </url>
+
+
+  <url>
+    <loc>https://swift.desight.co/en/order</loc>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="https://swift.desight.co/he/order"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/order"
+    />
   </url>
+
   <url>
-    <loc>https://swift.desight.co/faq</loc>
-    <lastmod>2025-04-25</lastmod>
+    <loc>https://swift.desight.co/he/order</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://swift.desight.co/en/order"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/order"
+    />
+  </url>
+
+
+  <url>
+    <loc>https://swift.desight.co/en/faq</loc>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="https://swift.desight.co/he/faq"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/faq"
+    />
   </url>
+
+  <url>
+    <loc>https://swift.desight.co/he/faq</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://swift.desight.co/en/faq"
+    />
+     <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://swift.desight.co/faq"
+    />
+  </url>
+
 </urlset>
