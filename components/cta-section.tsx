@@ -1,8 +1,11 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
-export default function CTASection() {
+export default async function CTASection({ lang }: { lang: "he" | "en" }) {
+  const dict = await getDictionary(lang);
+
   return (
     <section className="bg-primary/5 w-full py-16 md:py-24" id="contact">
       <div className="px-4 md:px-6">
@@ -11,33 +14,17 @@ export default function CTASection() {
             {/* Left side - colored background */}
             <div className="bg-primary flex flex-col justify-center p-8 text-white md:col-span-2 md:p-12">
               <h3 className="mb-4 text-2xl font-bold md:text-3xl">
-                Why clients choose our affordable landing page package
+                {dict.ctaSection.benefitsHeadline}
               </h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                  <span>Fixed $990 price with no surprises or hidden fees</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                  <span>
-                    Fast 3-week turnaround with our quick website design process
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                  <span>Professional design optimized for conversions</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                  <span>
-                    Simple, streamlined process with clear communication
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                  <span>Mobile-responsive and SEO-friendly</span>
-                </li>
+                {/* Map over the benefits array from the dictionary */}
+                {dict.ctaSection.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <Check className="mt-1 mr-2 h-5 w-5 flex-shrink-0" />{" "}
+                    {/* Icon kept as-is */}
+                    <span>{benefit}</span> {/* Benefit text from dictionary */}
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -45,18 +32,22 @@ export default function CTASection() {
             <div className="flex flex-col justify-center p-8 md:col-span-3 md:p-12">
               <div className="mb-8 text-center md:text-left">
                 <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                  Ready to launch your affordable landing page?
+                  {dict.ctaSection.ctaHeadline}
                 </h2>
                 <p className="text-xl text-gray-500">
-                  Get started today with our fast website design service and
-                  have your page live in as little as 3 weeks.
+                  {dict.ctaSection.ctaDescription}
                 </p>
               </div>
 
               <div className="flex flex-col items-center space-y-6 md:items-start">
                 <div className="flex items-center">
-                  <div className="text-primary text-4xl font-bold">$990</div>
-                  <div className="ml-2 text-gray-500">one-time payment</div>
+                  <div className="text-primary text-4xl font-bold">
+                    {dict.ctaSection.ctaPrice}
+                  </div>
+                  {/* Price kept as-is */}
+                  <div className="ml-2 text-gray-500 rtl:mr-2">
+                    {dict.ctaSection.oneTimePaymentLabel}
+                  </div>
                 </div>
 
                 <Button
@@ -65,19 +56,18 @@ export default function CTASection() {
                   asChild
                 >
                   <Link
-                    href="/contact"
+                    href={`/${lang}/contact`}
                     className="flex items-center justify-center gap-2"
                   >
-                    Start Your Project for $990
-                    <ArrowRight className="h-5 w-5" />
+                    {dict.ctaSection.ctaButton}
+                    <ArrowRight className="h-5 w-5 rtl:rotate-180" />{" "}
+                    {/* Icon kept as-is */}
                   </Link>
                 </Button>
 
                 <div className="text-center text-sm text-gray-500 md:text-left">
-                  <p>No commitment required to get started.</p>
-                  <p>
-                    We&apos;ll discuss your project before any payment is made.
-                  </p>
+                  <p>{dict.ctaSection.noCommitmentText}</p>{" "}
+                  <p>{dict.ctaSection.discussionText}</p>
                 </div>
               </div>
             </div>

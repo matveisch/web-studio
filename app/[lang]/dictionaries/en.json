@@ -1,0 +1,443 @@
+{
+  "layout": {
+    "metadata": {
+      "title": "Swift Desight - Affordable Landing Page Design for $990 | Fast Website Design",
+      "description": "Get your professional, affordable landing page for just $990. Fast 3-week turnaround with expert design. Affordable landing page design with quick delivery.",
+      "keywords": [
+        "affordable landing page",
+        "fast website design",
+        "$990 landing page",
+        "professional landing page",
+        "quick website design",
+        "budget landing page",
+        "landing page package",
+        "3-week website",
+        "business landing page"
+      ]
+    },
+    "og": {
+      "title": "Affordable Landing Page Design for $990 | Fast Website Design",
+      "description": "Professional landing pages with 3-week turnaround. Fixed price of $990 with no hidden fees.",
+      "imageAlt": "Swift Desight - Affordable Landing Page Design"
+    },
+    "schema": {
+      "serviceName": "Affordable Landing Page Design",
+      "serviceDescription": "Professional landing page design service for $990 with fast 3-week turnaround"
+    },
+    "siteName": "Swift Desight",
+    "nav": {
+      "home": "Home",
+      "contact": "Contact",
+      "orderNowButton": "Order Now"
+    },
+    "footer": {
+      "description": "Professional affordable landing pages for businesses of all sizes. Fixed $990 price, fast turnaround.",
+      "quickLinksTitle": "Quick Links",
+      "quickLinks": {
+        "home": "Home",
+        "contact": "Contact",
+        "orderNow": "Order Now",
+        "faq": "FAQ"
+      },
+      "contactTitle": "Contact",
+      "legalTitle": "Legal",
+      "legal": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service"
+      },
+      "copyright": "© {{year}} Swift Desight. All rights reserved."
+    }
+  },
+  "hero": {
+    "headline": "Affordable Landing Page for Just $990",
+    "subheadline": "Our expert-designed template, customized with your brand, live in as little as 3 weeks. Fast website design that converts.",
+    "ctaButton": "Start Your Project Today",
+    "imageAlt": "Affordable landing page template mockup showing desktop and mobile versions",
+    "readyInLabel": "Ready in",
+    "readyInValue": "3 Weeks"
+  },
+  "home": {
+    "metadataDescription": "Get your professional, affordable landing page for just $990. Fast website design with 3-week turnaround and expert design.",
+    "schema": {
+      "name": "Affordable Landing Page Design for $990",
+      "description": "Professional landing page design service with fast 3-week turnaround for just $990",
+      "serviceName": "Landing Page Design",
+      "price": "$990",
+      "currency": "USD"
+    }
+  },
+  "problemSolution": {
+    "problemTitle": "The Problem",
+    "problemHeadline": "Why Most Businesses Struggle with Web Design",
+    "problem1": {
+      "title": "Too Expensive",
+      "description": "Custom websites often cost $5,000-$20,000+, putting them out of reach for many small businesses."
+    },
+    "problem2": {
+      "title": "Too Slow",
+      "description": "Traditional web design projects can take 2-6 months, delaying your ability to attract customers."
+    },
+    "problem3": {
+      "title": "Too Complicated",
+      "description": "Complex processes, endless revisions, and technical jargon make the experience frustrating."
+    },
+    "solutionTitle": "Our Solution",
+    "solutionHeadline": "The $990 Landing Page Package",
+    "solution1": {
+      "title": "Affordable Fixed Price",
+      "description": "One transparent price of $990 with no hidden fees or surprise costs."
+    },
+    "solution2": {
+      "title": "Fast 3-Week Turnaround",
+      "description": "Get your professional landing page live and generating leads in just 3 weeks."
+    },
+    "solution3": {
+      "title": "Simple, Streamlined Process",
+      "description": "Our proven template and clear process eliminates complexity and delivers results."
+    }
+  },
+  "whatsIncluded": {
+    "headline": "What's Included in Your $990 Package",
+    "subheadline": "Everything you need for a professional, high-converting landing page",
+    "features": {
+      "feature1": {
+        "title": "Expert-Designed Layout",
+        "description": "A clean, modern, and easy-to-understand structure optimized for visitor engagement and conversions."
+      },
+      "feature2": {
+        "title": "Mobile & Desktop Responsive",
+        "description": "Looks great and functions perfectly on all devices."
+      },
+      "feature3": {
+        "title": "Your Branding Integration",
+        "description": "We seamlessly incorporate your logo and brand colors."
+      },
+      "feature4": {
+        "title": "Content Placement",
+        "description": "We'll populate the page with your provided text and images."
+      },
+      "feature5": {
+        "title": "Contact/Lead Form",
+        "description": "An integrated form to capture visitor inquiries or leads."
+      },
+      "feature6": {
+        "title": "Clear Call-to-Action (CTA)",
+        "description": "Strategically placed buttons to guide user actions."
+      },
+      "feature7": {
+        "title": "Basic SEO Setup",
+        "description": "Essential on-page optimization (page title, meta description) to help search engines find you."
+      },
+      "feature8": {
+        "title": "Fast Loading Speed",
+        "description": "Optimized for quick performance."
+      }
+    }
+  },
+  "howItWorks": {
+    "headline": "The Simple Process",
+    "subheadline": "From order to launch in 5 easy steps",
+    "steps": {
+      "step1": {
+        "title": "Order Package & Initial Chat",
+        "text": "Optional brief call to confirm fit."
+      },
+      "step2": {
+        "title": "Submit Your Materials",
+        "text": "Use a clear form/checklist: logo, text, images, color preferences, font choice."
+      },
+      "step3": {
+        "title": "We Build & Brand Your Page",
+        "text": "Our team gets to work!"
+      },
+      "step4": {
+        "title": "Review & Refine",
+        "text": "You review the draft; one round of minor tweaks for text/colors included."
+      },
+      "step5": {
+        "title": "Launch!",
+        "text": "We help you get it live or provide the files."
+      }
+    }
+  },
+  "examplesShowcase": {
+    "headline": "Examples of Our Work",
+    "subheadline": "See what your $990 landing page could look like",
+    "imageAltDesktop": "{title} desktop view",
+    "imageAltMobile": "{title} mobile view",
+    "examples": {
+      "example1": {
+        "title": "Local Bakery",
+        "description": "A mouth-watering landing page for a local bakery that showcases their artisanal products and drives in-store visits.",
+        "desktopImage": "/bakery-desktop.png",
+        "mobileImage": "/bakery-mobile.png",
+        "benefits": [
+          "Menu showcase with beautiful imagery",
+          "Easy location and hours information",
+          "Online order form for special requests"
+        ]
+      },
+      "example2": {
+        "title": "Fitness Challenge",
+        "description": "An energetic, motivational landing page for a 30-day fitness challenge program with clear sign-up process.",
+        "desktopImage": "/fitness-desktop.png",
+        "mobileImage": "/fitness-mobile.png",
+        "benefits": [
+          "Personalized workout plan previews",
+          "Community forum access for support and motivation",
+          "Simple registration process with payment integration"
+        ]
+      },
+      "example3": {
+        "title": "Educational Blog",
+        "description": "A clean, content-focused landing page for an educational blog that highlights key articles and encourages subscriptions.",
+        "desktopImage": "/blog-desktop.png",
+        "mobileImage": "/blog-mobile.png",
+        "benefits": [
+          "Categorized article previews with featured images",
+          "Category and tag system",
+          "Email newsletter subscription form"
+        ]
+      }
+    }
+  },
+  "turnaroundTime": {
+    "headline": "Fast Turnaround Time",
+    "subheadline": "Get your professional landing page up and running quickly",
+    "mainContent": {
+      "title": "Up to 3 weeks from receiving your final content and preferences",
+      "description": "While most web design projects can take months, our streamlined process and focused approach allows us to deliver your landing page in as little as 3 weeks."
+    },
+    "weeksLabel": "WEEKS",
+    "timeline": {
+      "step1": {
+        "title": "Week 1",
+        "description": "Initial setup, content organization, and design planning based on your materials."
+      },
+      "step2": {
+        "title": "Week 2",
+        "description": "Design implementation, content integration, and functionality development."
+      },
+      "step3": {
+        "title": "Week 3",
+        "description": "Final review, refinements based on your feedback, and preparation for launch."
+      }
+    }
+  },
+  "ctaSection": {
+    "benefitsHeadline": "Why clients choose our affordable landing page package",
+    "benefits": [
+      "Fixed $990 price with no surprises or hidden fees",
+      "Fast 3-week turnaround with our quick website design process",
+      "Professional design optimized for conversions",
+      "Simple, streamlined process with clear communication",
+      "Mobile-responsive and SEO-friendly"
+    ],
+    "ctaPrice": "$990",
+    "ctaHeadline": "Ready to launch your affordable landing page?",
+    "ctaDescription": "Get started today with our fast website design service and have your page live in as little as 3 weeks.",
+    "oneTimePaymentLabel": "one-time payment",
+    "ctaButton": "Start Your Project for $990",
+    "noCommitmentText": "No commitment required to get started.",
+    "discussionText": "We'll discuss your project before any payment is made."
+  },
+  "contactPage": {
+    "metadata": {
+      "title": "Contact Us | Affordable $990 Landing Page Design | Fast Website Design",
+      "description": "Get in touch to start your affordable landing page project. Fast website design with 3-week turnaround for just $990."
+    },
+    "backToHomeLink": "Back to Home",
+    "headline": "Get Started with Your Affordable Landing Page",
+    "description": "Have questions or ready to order? We're here to help you get your professional $990 landing page up and running with our fast website design service.",
+    "questionsSection": {
+      "headline": "Have Questions?",
+      "description": "Fill out this simple form if you have pre-sale questions about our affordable $990 landing page package. We'll get back to you within 1 business day."
+    },
+    "directContactHeadline": "Prefer to reach us directly?"
+  },
+  "contactForm": {
+    "success": {
+      "headline": "Message Sent!",
+      "message": "Thanks for reaching out. We'll get back to you within 1 business day."
+    },
+    "error": {
+      "apiFallback": "Failed to send message",
+      "unexpected": "An unexpected error occurred"
+    },
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Your Question",
+    "messagePlaceholder": "What would you like to know about our landing page package?",
+    "submitButton": {
+      "default": "Send Message",
+      "sending": "Sending..."
+    }
+  },
+  "orderSection": {
+    "headline": "Ready to Order?",
+    "description": "Start your affordable landing page project today and get your professional page live in as little as 3 weeks with our fast website design service.",
+    "priceLabel": "$990",
+    "packageSummary": {
+      "title": "Landing Page Package",
+      "benefits": [
+        "Expert-designed, conversion-focused layout",
+        "Mobile & desktop responsive design",
+        "Your branding integration",
+        "Contact/lead form integration",
+        "Basic SEO setup"
+      ]
+    },
+    "postOrderHeadline": "What happens after you order:",
+    "postOrderSteps": [
+      "You'll receive an email with our onboarding questionnaire",
+      "We'll schedule an optional brief call to confirm project details",
+      "You'll submit your content and preferences",
+      "Our team will build your landing page",
+      "You'll review and we'll make any needed refinements",
+      "Your page goes live!"
+    ]
+  },
+  "orderPage": {
+    "metadata": {
+      "title": "Order Your $990 Landing Page | Fast Website Design",
+      "description": "Order your affordable landing page for just $990. Fast website design with 3-week turnaround. Start your project today."
+    },
+    "backToContactLink": "Back to Contact",
+    "headline": "Order Your $990 Landing Page",
+    "description": "Complete this form to start your affordable landing page project. Our fast website design process ensures delivery in just 3 weeks."
+  },
+  "orderForm": {
+    "success": {
+      "headline": "Order Received!",
+      "message": "Thanks for ordering your landing page. We'll be in touch within 1 business day to get started.",
+      "returnHomeButton": "Return to Home"
+    },
+    "yourInfo": {
+      "title": "Your Information",
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "First name",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Last name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone (optional)",
+      "companyLabel": "Company/Business Name",
+      "companyPlaceholder": "Your business name"
+    },
+    "projectDetails": {
+      "title": "Project Details",
+      "websiteLabel": "Current Website (if any)",
+      "typeLabel": "Landing Page Type",
+      "typeOptions": {
+        "business": "Business/Service",
+        "product": "Product",
+        "event": "Event",
+        "other": "Other"
+      },
+      "descriptionLabel": "Brief Description of Your Business/Project",
+      "descriptionPlaceholder": "Tell us a bit about your business and what you want to achieve with this landing page.",
+      "timelineLabel": "Desired Timeline",
+      "timelineOptions": {
+        "standard": "Standard (up to 3 weeks)",
+        "rush": "Rush (additional fee may apply)"
+      }
+    },
+    "payment": {
+      "title": "Payment",
+      "scheduleHeadline": "Payment Schedule:",
+      "scheduleItems": [
+        "<strong>50% Deposit ($495)</strong> - Required upfront to begin the project",
+        "<strong>50% Final Payment ($495)</strong> - Due upon your approval, before the page goes live"
+      ],
+      "priceLabel": "$990",
+      "submissionText": "After submitting this form, we'll send you an invoice for the initial 50% deposit ($495). Once we receive your payment, we'll begin work on your landing page.",
+      "totalCostLabel": "total project cost",
+      "includesText": "Includes everything mentioned in the landing page package"
+    },
+    "submitButton": {
+      "processing": "Processing...",
+      "default": "Submit Order"
+    }
+  },
+  "faqPage": {
+    "metadata": {
+      "title": "FAQ | Affordable $990 Landing Page | Fast Website Design",
+      "description": "Frequently asked questions about our affordable $990 landing page package with fast 3-week turnaround time.",
+      "keywords": [
+        "affordable landing page FAQ",
+        "fast website design questions",
+        "$990 landing page details"
+      ]
+    },
+    "backToHomeLink": "Back to Home",
+    "headline": "Frequently Asked Questions",
+    "description": "Here are answers to common questions about our affordable $990 Landing Page with fast website design.",
+    "questions": {
+      "item-1": {
+        "trigger": "What exactly can I customize on the affordable landing page?",
+        "content": [
+          "You have significant flexibility! You can choose your preferred colors, fonts (from standard web-safe options or Google Fonts), and background images. You also dictate the order of the different content sections on the page. We build each page custom for you – there are no restrictive templates. You'll also provide specific images like your logo or product photos to be included."
+        ]
+      },
+      "item-2": {
+        "trigger": "What content do I need to provide?",
+        "content": [
+          "You will need to provide essential information specific to your needs, such as your contact details, company logo, and any specific images you want featured. For the main text sections (headlines, descriptions, etc.), if you don't have final copy ready, we can use well-structured placeholder text to build the page. However, please note (as explained in question 4) that updating this text later requires coding assistance unless arranged differently beforehand. We can use icons and placeholder images where needed, which you would replace by providing your final images to us."
+        ]
+      },
+      "item-3": {
+        "trigger": "Is hosting or a domain name included in the $990 price?",
+        "content": [
+          "<strong>Domain Name:</strong> No, the domain name (e.g., www.yourcompany.com) is not included. You will need to purchase this yourself from a domain registrar. We can offer guidance on this process if needed.",
+          "<strong>Hosting:</strong> We provide complimentary basic hosting for your landing page initially. This hosting is suitable for typical landing page traffic levels. If your page's traffic grows significantly and requires more server resources, we will discuss transitioning to a standard paid hosting plan with you and can assist in setting that up."
+        ]
+      },
+      "item-4": {
+        "trigger": "Can I update the content myself later?",
+        "content": [
+          "Typically, no. The standard landing page is built using code (HTML/CSS/JS) for optimal performance and design flexibility. This means changes to text, images, or layout after the site is live require coding knowledge. Any updates needed after the project completion would be handled as a separate request, and we can provide a quote for the work involved.",
+          "<strong>Exception:</strong> If you know beforehand that you'll need to frequently update specific sections yourself (like portfolio images or promotional banners), please discuss this with us <em>before</em> the project starts. We can potentially build those specific parts using a different method that allows easier updates, which might affect the project scope and cost."
+        ]
+      },
+      "item-5": {
+        "trigger": "What is the estimated turnaround time?",
+        "content": [
+          "Our standard turnaround time is approximately 3 weeks, starting from when we receive the 50% deposit and all necessary content/information from you (like your logo, specific text, images, and customization choices). This timeline can be adjusted if the scope involves specific, complex requirements discussed beforehand."
+        ]
+      },
+      "item-6": {
+        "trigger": "What if I need more pages or features later?",
+        "content": [
+          "This offer is specifically for a single landing page. If you decide later that you need a full multi-page website or additional features (like a blog, e-commerce, or booking system), we'd be happy to discuss that as a separate project and provide a new quote based on your requirements."
+        ]
+      },
+      "item-7": {
+        "trigger": "What does 'Basic SEO' include?",
+        "content": [
+          "Our Basic SEO setup ensures your landing page is technically ready for search engines. This includes:",
+          "Setting up essential meta tags (like Title tags and Meta Descriptions) based on the content provided.",
+          "Ensuring the page structure uses appropriate header tags (H1, H2, etc.).",
+          "Submitting your landing page to Google for indexing.",
+          "Ensuring the page is mobile-friendly.",
+          "This service focuses on the technical on-page setup but does not include advanced SEO strategies like keyword research, link building, or ongoing content creation."
+        ]
+      },
+      "item-8": {
+        "trigger": "How many revisions are included?",
+        "content": [
+          "We include up to 5 rounds of revisions during the design and development phase. A revision round typically involves you providing feedback on the current draft, and us implementing those changes. We aim to get everything perfect within these rounds. If further changes are requested after these 5 rounds are exhausted, they will be quoted separately based on the extent of the requested changes."
+        ]
+      },
+      "item-9": {
+        "trigger": "What is the cost and how do I pay?",
+        "content": [
+          "<strong>Total Cost:</strong> $990 USD.",
+          "<strong>Payment Terms:</strong> We require a 50% deposit ($495) upfront to begin the project, with the remaining 50% ($495) due upon completion and your final approval, before the page goes live on your hosting/domain.",
+          "<strong>Payment Methods:</strong> We accept major credit/debit cards. If you are located locally, we may be able to arrange cash payment upon request."
+        ]
+      }
+    },
+    "footerNote": "FAQ as of {date}. Pricing and terms subject to change."
+  }
+}

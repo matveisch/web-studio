@@ -1,4 +1,5 @@
 import { Globe } from "lucide-react";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,8 +18,12 @@ export default function LanguageSwitcher() {
       <DropdownMenuContent>
         <DropdownMenuLabel>Language</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="cursor-pointer">English</DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">German</DropdownMenuItem>
+        <DropdownMenuItem asChild className="cursor-pointer">
+          <Link href="/en">English</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild className="cursor-pointer">
+          <Link href="/he">Hebrew</Link>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
