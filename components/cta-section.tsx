@@ -1,12 +1,13 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
-// Define the expected dictionary structure for this component
 interface Dictionary {
   ctaSection: {
     benefitsHeadline: string;
     benefits: string[];
+    ctaPrice: string;
     ctaHeadline: string;
     ctaDescription: string;
     oneTimePaymentLabel: string;
@@ -20,7 +21,9 @@ interface CTASectionProps {
   dict: Dictionary;
 }
 
-export default function CTASection({ dict }: CTASectionProps) {
+export default async function CTASection({ lang }: { lang: "he" | "en" }) {
+  const dict = await getDictionary(lang);
+
   return (
     <section className="bg-primary/5 w-full py-16 md:py-24" id="contact">
       <div className="px-4 md:px-6">
@@ -56,7 +59,9 @@ export default function CTASection({ dict }: CTASectionProps) {
 
               <div className="flex flex-col items-center space-y-6 md:items-start">
                 <div className="flex items-center">
-                  <div className="text-primary text-4xl font-bold">$990</div>{" "}
+                  <div className="text-primary text-4xl font-bold">
+                    {dict.ctaSection.ctaPrice}
+                  </div>
                   {/* Price kept as-is */}
                   <div className="ml-2 text-gray-500 rtl:mr-2">
                     {dict.ctaSection.oneTimePaymentLabel}

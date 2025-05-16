@@ -42,15 +42,15 @@ export default async function Home({
               "@type": "SpeakableSpecification",
               "cssSelector": ["h1", ".hero-description"] // CSS selectors typically not translated
             },
-            "name": "${dict.home.schema.name}", // Use dictionary
-            "description": "${dict.home.schema.description}", // Use dictionary
+            "name": "${dict.home.schema.name}", 
+            "description": "${dict.home.schema.description}", 
             "mainEntity": {
               "@type": "Service",
-              "name": "${dict.home.schema.serviceName}", // Use dictionary
+              "name": "${dict.home.schema.serviceName}", 
               "offers": {
                 "@type": "Offer",
-                "price": "990", // Price kept as-is
-                "priceCurrency": "USD" // Currency kept as-is
+                "price": "${dict.home.schema.price}", 
+                "priceCurrency": "${dict.home.schema.currency}"
               }
             }
           }
@@ -63,7 +63,7 @@ export default async function Home({
         <HowItWorks lang={lang} />
         <ExamplesShowcase dict={dict} />
         <TurnaroundTime dict={dict} />
-        <CTASection dict={dict} />
+        <CTASection lang={lang} />
       </main>
     </>
   );

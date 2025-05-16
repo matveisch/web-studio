@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Page component - make it async to load the dictionary
 export default async function ContactPage({ params }: Props) {
-  // Load the dictionary for use in the component's JSX
-  const dict = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <main className="flex min-h-screen flex-col">
