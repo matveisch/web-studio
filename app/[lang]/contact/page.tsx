@@ -6,7 +6,7 @@ import Link from "next/link";
 import { getDictionary } from "../dictionaries";
 
 type Props = {
-  params: { lang: "en" | "he" };
+  params: Promise<{ lang: "he" | "en" }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

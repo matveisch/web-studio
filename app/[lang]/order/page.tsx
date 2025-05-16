@@ -4,25 +4,20 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "../dictionaries";
 
-// Define Props to get route parameters (assuming locale is in params)
 type Props = {
-  params: { lang: "en" | "he" };
+  params: Promise<{ lang: "he" | "en" }>;
 };
 
-// Make generateMetadata async to load the dictionary for metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return {
-    // Use translated metadata from the dictionary
     title: dict.orderPage.metadata.title,
     description: dict.orderPage.metadata.description,
-    // You might also want to adjust openGraph metadata here if it's page-specific
   };
 }
 
-// Page component - make it async to load the dictionary
 export default async function OrderPage({ params }: Props) {
   const { lang } = await params;
   const dict = await getDictionary(lang);

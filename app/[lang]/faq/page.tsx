@@ -12,7 +12,7 @@ import { getDictionary } from "../dictionaries";
 
 // Define Props to get route parameters (assuming locale is in params)
 type Props = {
-  params: { lang: "he" | "en" };
+  params: Promise<{ lang: "he" | "en" }>;
 };
 
 // Make generateMetadata async to load the dictionary for metadata
