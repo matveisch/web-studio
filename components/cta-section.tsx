@@ -3,20 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
-interface Dictionary {
-  ctaSection: {
-    benefitsHeadline: string;
-    benefits: string[];
-    ctaPrice: string;
-    ctaHeadline: string;
-    ctaDescription: string;
-    oneTimePaymentLabel: string;
-    ctaButton: string;
-    noCommitmentText: string;
-    discussionText: string;
-  };
-}
-
 export default async function CTASection({ lang }: { lang: "he" | "en" }) {
   const dict = await getDictionary(lang);
 
