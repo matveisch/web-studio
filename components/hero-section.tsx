@@ -23,7 +23,10 @@ export default async function HeroSection({ lang }: { lang: "he" | "en" }) {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button className="px-8 py-6 text-lg" asChild>
-                <Link href="/contact" className="flex items-center gap-2">
+                <Link
+                  href={`/${lang}/contact`}
+                  className="flex items-center gap-2"
+                >
                   {dict.hero.ctaButton}
                   <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                 </Link>

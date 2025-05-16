@@ -17,7 +17,8 @@ type Props = {
 
 // Make generateMetadata async to load the dictionary for metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.lang); // Load the dictionary
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return {
     // Use translated metadata from the dictionary
@@ -29,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Page component - make it async to load the dictionary
 export default async function FAQPage({ params }: Props) {
-  // Load the dictionary for use in the component's JSX
-  const dict = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   // Get the keys for the questions (e.g., 'item-1', 'item-2', ...)
   // This ensures the order is maintained as defined in the JSON
@@ -43,7 +44,7 @@ export default async function FAQPage({ params }: Props) {
         <div className="container px-4 md:px-6">
           {/* Link back to home */}
           <Link
-            href="/" // Keep href as is, assuming home page isn't locale-prefixed or handled by routing
+            href={`/${lang}/`}
             className="text-primary mb-6 inline-flex items-center text-sm font-medium hover:underline"
           >
             <ArrowLeft className="mr-2 h-4 w-4 rtl:mr-0 rtl:ml-2 rtl:rotate-180" />{" "}

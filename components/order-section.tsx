@@ -7,6 +7,7 @@ interface Dictionary {
   orderSection: {
     headline: string;
     description: string;
+    priceLabel: string;
     packageSummary: {
       title: string;
       benefits: string[]; // benefits is an array of strings
@@ -26,9 +27,10 @@ interface Dictionary {
 
 interface OrderSectionProps {
   dict: Dictionary;
+  lang: "he" | "en";
 }
 
-export default function OrderSection({ dict }: OrderSectionProps) {
+export default function OrderSection({ dict, lang }: OrderSectionProps) {
   return (
     <div className="bg-primary/5 rounded-xl p-8">
       <h2 className="mb-6 text-2xl font-bold">{dict.orderSection.headline}</h2>
@@ -39,30 +41,27 @@ export default function OrderSection({ dict }: OrderSectionProps) {
           <h3 className="text-xl font-bold">
             {dict.orderSection.packageSummary.title}
           </h3>
-          <div className="text-primary text-2xl font-bold">$990</div>{" "}
-          {/* Price kept as-is */}
+          <div className="text-primary text-2xl font-bold">
+            {dict.orderSection.priceLabel}
+          </div>
         </div>
 
         <ul className="mb-6 space-y-3">
-          {/* Map over the package benefits array from the dictionary */}
           {dict.orderSection.packageSummary.benefits.map((benefit, index) => (
             <li key={index} className="flex items-start">
               <Check className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-green-500 rtl:ml-2" />{" "}
-              {/* Icon kept as-is */}
-              <span>{benefit}</span> {/* Benefit text from dictionary */}
+              <span>{benefit}</span>
             </li>
           ))}
         </ul>
 
         <Button size="lg" className="w-full" asChild>
           <Link
-            href="/order" // Link path kept as-is
+            href={`/${lang}/order`}
             className="flex items-center justify-center gap-2"
           >
-            {/* Reuse the Order Now text from the layout nav section */}
             {dict.layout.nav.orderNowButton}
-            <ArrowRight className="h-5 w-5 rtl:rotate-180" />{" "}
-            {/* Icon kept as-is */}
+            <ArrowRight className="h-5 w-5 rtl:rotate-180" />
           </Link>
         </Button>
       </div>

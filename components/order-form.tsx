@@ -54,6 +54,7 @@ interface Dictionary {
       submissionText: string;
       totalCostLabel: string;
       includesText: string;
+      priceLabel: string;
     };
     submitButton: {
       processing: string;
@@ -298,7 +299,9 @@ export default function OrderForm({
 
           <div className="bg-primary/5 flex items-center rounded-lg p-4">
             <div className="mr-4 rtl:mr-0 rtl:ml-4">
-              <div className="text-primary text-2xl font-bold">$990</div>
+              <div className="text-primary text-2xl font-bold">
+                {dict.orderForm.payment.priceLabel}
+              </div>
             </div>
             <div className="text-sm text-gray-500">
               {dict.orderForm.payment.includesText}

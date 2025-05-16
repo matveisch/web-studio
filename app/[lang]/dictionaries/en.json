@@ -278,6 +278,7 @@
   "orderSection": {
     "headline": "Ready to Order?",
     "description": "Start your affordable landing page project today and get your professional page live in as little as 3 weeks with our fast website design service.",
+    "priceLabel": "$990",
     "packageSummary": {
       "title": "Landing Page Package",
       "benefits": [
@@ -349,6 +350,7 @@
         "<strong>50% Deposit ($495)</strong> - Required upfront to begin the project",
         "<strong>50% Final Payment ($495)</strong> - Due upon your approval, before the page goes live"
       ],
+      "priceLabel": "$990",
       "submissionText": "After submitting this form, we'll send you an invoice for the initial 50% deposit ($495). Once we receive your payment, we'll begin work on your landing page.",
       "totalCostLabel": "total project cost",
       "includesText": "Includes everything mentioned in the landing page package"

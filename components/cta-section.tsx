@@ -74,7 +74,7 @@ export default async function CTASection({ lang }: { lang: "he" | "en" }) {
                   asChild
                 >
                   <Link
-                    href="/contact"
+                    href={`/${lang}/contact`}
                     className="flex items-center justify-center gap-2"
                   >
                     {dict.ctaSection.ctaButton}
