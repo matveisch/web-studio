@@ -17,10 +17,6 @@ interface Dictionary {
   };
 }
 
-interface CTASectionProps {
-  dict: Dictionary;
-}
-
 export default async function CTASection({ lang }: { lang: "he" | "en" }) {
   const dict = await getDictionary(lang);
 

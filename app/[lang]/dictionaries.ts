@@ -9,6 +9,6 @@ export const getDictionary = async (locale: "he" | "en") => {
   try {
     return await dictionaries[locale]();
   } catch (error) {
-    throw new Error(`Error loading locale dictionary for ${locale}`);
+    throw new Error(`Error loading locale dictionary for ${locale} – ${error}`);
   }
 };
