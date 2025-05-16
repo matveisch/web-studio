@@ -1,54 +1,61 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { CheckCircle, Clock, DollarSign, Zap } from "lucide-react";
 
-export default function ProblemSolution() {
+// Accept dict as a prop
+export default async function ProblemSolution({ lang }: { lang: "he" | "en" }) {
+  const dict = await getDictionary(lang);
+
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50">
+    <section className="w-full bg-gray-50 py-12 md:py-24">
       <div className="px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Problem Column */}
           <div className="space-y-6">
-            <div className="inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-700 mb-2">
-              The Problem
+            <div className="mb-2 inline-block rounded-lg bg-red-100 px-3 py-1 text-sm text-red-700">
+              {dict.problemSolution.problemTitle}
             </div>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-              Why Most Businesses Struggle with Web Design
+              {dict.problemSolution.problemHeadline}
             </h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="mt-1 bg-red-100 p-2 rounded-full">
+                <div className="mt-1 rounded-full bg-red-100 p-2">
                   <DollarSign className="h-5 w-5 text-red-700" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Too Expensive</h3>
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.problem1.title}
+                  </h3>
                   <p className="text-gray-500">
-                    Custom websites often cost $5,000-$20,000+, putting them out
-                    of reach for many small businesses.
+                    {dict.problemSolution.problem1.description}
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 bg-red-100 p-2 rounded-full">
+                <div className="mt-1 rounded-full bg-red-100 p-2">
                   <Clock className="h-5 w-5 text-red-700" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Too Slow</h3>
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.problem2.title}
+                  </h3>
                   <p className="text-gray-500">
-                    Traditional web design projects can take 2-6 months,
-                    delaying your ability to attract customers.
+                    {dict.problemSolution.problem2.description}
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 bg-red-100 p-2 rounded-full">
+                <div className="mt-1 rounded-full bg-red-100 p-2">
                   <Zap className="h-5 w-5 text-red-700" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Too Complicated</h3>
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.problem3.title}
+                  </h3>
                   <p className="text-gray-500">
-                    Complex processes, endless revisions, and technical jargon
-                    make the experience frustrating.
+                    {dict.problemSolution.problem3.description}
                   </p>
                 </div>
               </div>
@@ -57,50 +64,51 @@ export default function ProblemSolution() {
 
           {/* Solution Column */}
           <div className="space-y-6">
-            <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700 mb-2">
-              Our Solution
+            <div className="mb-2 inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+              {dict.problemSolution.solutionTitle}
             </div>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-              The $990 Landing Page Package
+              {dict.problemSolution.solutionHeadline}
             </h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="mt-1 bg-green-100 p-2 rounded-full">
+                <div className="mt-1 rounded-full bg-green-100 p-2">
                   <CheckCircle className="h-5 w-5 text-green-700" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl">Affordable Fixed Price</h3>
-                  <p className="text-gray-500">
-                    One transparent price of $990 with no hidden fees or
-                    surprise costs.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="mt-1 bg-green-100 p-2 rounded-full">
-                  <CheckCircle className="h-5 w-5 text-green-700" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl">Fast 3-Week Turnaround</h3>
-                  <p className="text-gray-500">
-                    Get your professional landing page live and generating leads
-                    in just 3 weeks.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="mt-1 bg-green-100 p-2 rounded-full">
-                  <CheckCircle className="h-5 w-5 text-green-700" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl">
-                    Simple, Streamlined Process
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.solution1.title}
                   </h3>
                   <p className="text-gray-500">
-                    Our proven template and clear process eliminates complexity
-                    and delivers results.
+                    {dict.problemSolution.solution1.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="mt-1 rounded-full bg-green-100 p-2">
+                  <CheckCircle className="h-5 w-5 text-green-700" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.solution2.title}
+                  </h3>
+                  <p className="text-gray-500">
+                    {dict.problemSolution.solution2.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="mt-1 rounded-full bg-green-100 p-2">
+                  <CheckCircle className="h-5 w-5 text-green-700" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold">
+                    {dict.problemSolution.solution3.title}
+                  </h3>
+                  <p className="text-gray-500">
+                    {dict.problemSolution.solution3.description}
                   </p>
                 </div>
               </div>

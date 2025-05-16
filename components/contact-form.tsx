@@ -9,7 +9,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { AlertCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
-export default function ContactForm() {
+interface Dictionary {
+  contactForm: {
+    success: {
+      headline: string;
+      message: string;
+    };
+    error: {
+      apiFallback: string;
+      unexpected: string;
+    };
+    nameLabel: string;
+    namePlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitButton: {
+      default: string;
+      sending: string;
+    };
+  };
+}
+
+export default function ContactForm({ dict }: { dict: Dictionary }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -45,13 +68,19 @@ export default function ContactForm() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to send message");
+        // Use dictionary for the API fallback error message
+        throw new Error(
+          errorData.message || dict.contactForm.error.apiFallback,
+        );
       }
 
       setIsSubmitted(true);
+      // Optional: Clear the form on successful submission
+      setFormData({ name: "", email: "", message: "" });
     } catch (err) {
+      // Use dictionary for the unexpected error message
       setError(
-        err instanceof Error ? err.message : "An unexpected error occurred",
+        err instanceof Error ? err.message : dict.contactForm.error.unexpected,
       );
     } finally {
       setIsSubmitting(false);
@@ -66,11 +95,12 @@ export default function ContactForm() {
             <CheckCircle className="h-6 w-6 text-green-600" />
           </div>
         </div>
-        <h3 className="mb-2 text-lg font-medium">Message Sent!</h3>
-        <p className="text-gray-500">
-          Thanks for reaching out. We&apos;ll get back to you within 1 business
-          day.
-        </p>
+        {/* Use dictionary for success headline */}
+        <h3 className="mb-2 text-lg font-medium">
+          {dict.contactForm.success.headline}
+        </h3>
+        {/* Use dictionary for success message */}
+        <p className="text-gray-500">{dict.contactForm.success.message}</p>
       </div>
     );
   }
@@ -80,38 +110,48 @@ export default function ContactForm() {
       {error && (
         <div className="flex items-start rounded-lg border border-red-100 bg-red-50 p-4 text-sm">
           <AlertCircle className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-red-600" />
+          {/* Error message comes from state, which was set using dictionary or API error */}
           <p className="text-red-800">{error}</p>
         </div>
       )}
 
+      {/* Name Field */}
       <div className="grid gap-2">
-        <Label htmlFor="name">Name</Label>
+        {/* Use dictionary for label */}
+        <Label htmlFor="name">{dict.contactForm.nameLabel}</Label>
+        {/* Use dictionary for placeholder */}
         <Input
           id="name"
-          placeholder="Your name"
+          placeholder={dict.contactForm.namePlaceholder}
           required
           value={formData.name}
           onChange={handleChange}
         />
       </div>
 
+      {/* Email Field */}
       <div className="grid gap-2">
-        <Label htmlFor="email">Email</Label>
+        {/* Use dictionary for label */}
+        <Label htmlFor="email">{dict.contactForm.emailLabel}</Label>
+        {/* Use dictionary for placeholder */}
         <Input
           id="email"
           type="email"
-          placeholder="your@email.com"
+          placeholder={dict.contactForm.emailPlaceholder}
           required
           value={formData.email}
           onChange={handleChange}
         />
       </div>
 
+      {/* Message Field */}
       <div className="grid gap-2">
-        <Label htmlFor="message">Your Question</Label>
+        {/* Use dictionary for label */}
+        <Label htmlFor="message">{dict.contactForm.messageLabel}</Label>
+        {/* Use dictionary for placeholder */}
         <Textarea
           id="message"
-          placeholder="What would you like to know about our landing page package?"
+          placeholder={dict.contactForm.messagePlaceholder}
           className="min-h-[120px]"
           required
           value={formData.message}
@@ -119,8 +159,12 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* Submit Button */}
       <Button type="submit" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting
+          ? dict.contactForm.submitButton.sending // Use dictionary for sending text
+          : dict.contactForm.submitButton.default}{" "}
+        {/* Use dictionary for default text */}
       </Button>
     </form>
   );

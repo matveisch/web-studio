@@ -1,3 +1,4 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import {
   CheckSquare,
   MoveDown,
@@ -7,69 +8,70 @@ import {
   Upload,
 } from "lucide-react";
 
-export default function HowItWorks() {
-  const steps = [
-    {
-      title: "Order Package & Initial Chat",
-      text: "Optional brief call to confirm fit.",
-      icon: <ShoppingCart className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "Submit Your Materials",
-      text: "Use a clear form/checklist: logo, text, images, color preferences, font choice.",
-      icon: <Upload className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "We Build & Brand Your Page",
-      text: "Our team gets to work!",
-      icon: <Paintbrush className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "Review & Refine",
-      text: "You review the draft; one round of minor tweaks for text/colors included.",
-      icon: <CheckSquare className="h-5 w-5 text-primary" />,
-    },
-    {
-      title: "Launch!",
-      text: "We help you get it live or provide the files.",
-      icon: <Rocket className="h-5 w-5 text-primary" />,
-    },
-  ];
+// Define icons separately, as they are JSX, not text
+const stepIcons = {
+  step1: <ShoppingCart className="text-primary h-5 w-5" />,
+  step2: <Upload className="text-primary h-5 w-5" />,
+  step3: <Paintbrush className="text-primary h-5 w-5" />,
+  step4: <CheckSquare className="text-primary h-5 w-5" />,
+  step5: <Rocket className="text-primary h-5 w-5" />,
+};
+
+// Get the specific literal types of the step keys ('step1' | 'step2' | ...)
+type StepKey = keyof typeof stepIcons;
+
+export default async function HowItWorks({ lang }: { lang: "he" | "en" }) {
+  const dict = await getDictionary(lang);
 
   return (
-    <section className="w-full py-12 md:py-24 bg-gray-50">
+    <section className="w-full bg-gray-50 py-12 md:py-24">
       <div className="px-4 md:px-6">
-        <div className="text-center mb-10 md:mb-16">
+        <div className="mb-10 text-center md:mb-16">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl lg:text-5xl">
-            The Simple Process
+            {dict.howItWorks.headline} {/* Use dictionary */}
           </h2>
-          <p className="mt-4 text-xl text-gray-500 max-w-3xl mx-auto">
-            From order to launch in 5 easy steps
+          <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-500">
+            {dict.howItWorks.subheadline} {/* Use dictionary */}
           </p>
         </div>
 
         <div>
-          {steps.map((step, index) => (
-            <div
-              key={step.title}
-              className="flex flex-col items-center justify-center"
-            >
-              <div className="min-w-[64px] w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full bg-white border-2 border-primary text-primary font-bold text-xl shadow-md z-10">
-                <div className="min-w-[40px] w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full">
-                  {step.icon}
+          {/* Map over the keys of the steps object to maintain order */}
+          {/* Assert the type of stepKeyString to be StepKey */}
+          {Object.keys(dict.howItWorks.steps).map((stepKeyString, index) => {
+            const stepKey = stepKeyString as StepKey; // Type assertion here
+
+            // Now TypeScript knows stepKey is 'step1' | 'step2' | ...
+            const icon = stepIcons[stepKey]; // Access stepIcons using the asserted type
+            const stepData = dict.howItWorks.steps[stepKey]; // Access step data using the asserted type
+
+            return (
+              <div
+                key={stepKey} // Use the step key as the unique key
+                className="flex flex-col items-center justify-center"
+              >
+                <div className="border-primary text-primary z-10 flex h-16 w-16 min-w-[64px] flex-shrink-0 items-center justify-center rounded-full border-2 bg-white text-xl font-bold shadow-md">
+                  <div className="flex h-10 w-10 min-w-[40px] flex-shrink-0 items-center justify-center rounded-full">
+                    {icon} {/* Use the icon defined in the component */}
+                  </div>
                 </div>
-              </div>
-              <div className="max-w-sm flex flex-col items-center mt-5">
-                <div className="flex items-center mb-2">
-                  <h3 className="text-xl font-bold">{step.title}</h3>
+                <div className="mt-5 flex max-w-sm flex-col items-center">
+                  <div className="mb-2 flex items-center">
+                    <h3 className="text-xl font-bold">
+                      {stepData.title} {/* Use stepData */}
+                    </h3>
+                  </div>
+                  <p className="text-center text-gray-500">
+                    {stepData.text} {/* Use stepData */}
+                  </p>
                 </div>
-                <p className="text-gray-500 text-center">{step.text}</p>
+                {/* Add the MoveDown icon between steps */}
+                {index < Object.keys(dict.howItWorks.steps).length - 1 && (
+                  <MoveDown size={48} strokeWidth={1} className="my-5" />
+                )}
               </div>
-              {index < steps.length - 1 && (
-                <MoveDown size={48} strokeWidth={1} className="my-5" />
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
