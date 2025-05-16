@@ -61,7 +61,8 @@ export default function OrderSection({ dict }: OrderSectionProps) {
           >
             {/* Reuse the Order Now text from the layout nav section */}
             {dict.layout.nav.orderNowButton}
-            <ArrowRight className="h-5 w-5" /> {/* Icon kept as-is */}
+            <ArrowRight className="h-5 w-5 rtl:rotate-180" />{" "}
+            {/* Icon kept as-is */}
           </Link>
         </Button>
       </div>

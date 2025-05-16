@@ -252,6 +252,26 @@
     },
     "directContactHeadline": "מעדיפים ליצור קשר ישירות?"
   },
+  "contactForm": {
+    "success": {
+      "headline": "ההודעה נשלחה!",
+      "message": "תודה על פנייתכם. נחזור אליכם תוך יום עסקים אחד."
+    },
+    "error": {
+      "apiFallback": "שליחת ההודעה נכשלה",
+      "unexpected": "אירעה שגיאה בלתי צפויה"
+    },
+    "nameLabel": "שם",
+    "namePlaceholder": "השם שלך",
+    "emailLabel": "אימייל",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "השאלה שלכם",
+    "messagePlaceholder": "מה תרצו לדעת על חבילת עמוד הנחיתה שלנו?",
+    "submitButton": {
+      "default": "שלח הודעה",
+      "sending": "שולח..."
+    }
+  },
   "orderSection": {
     "headline": "מוכנים להזמין?",
     "description": "התחילו את פרויקט עמוד הנחיתה המשתלם שלכם היום וקבלו את העמוד המקצועי שלכם באוויר תוך 3 שבועות בלבד עם שירות עיצוב האתרים המהיר שלנו.",

@@ -10,7 +10,8 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return {
     title: dict.contactPage.metadata.title,
@@ -63,7 +64,7 @@ export default async function ContactPage({ params }: Props) {
               {dict.contactPage.questionsSection.description}
             </p>
             {/* Pass dictionary section to ContactForm if needed */}
-            <ContactForm />
+            <ContactForm dict={dict} />
             <div className="mt-8 space-y-4">
               {/* Direct contact options headline */}
               <h3 className="font-semibold">

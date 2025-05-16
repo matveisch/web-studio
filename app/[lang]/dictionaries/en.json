@@ -252,6 +252,26 @@
     },
     "directContactHeadline": "Prefer to reach us directly?"
   },
+  "contactForm": {
+    "success": {
+      "headline": "Message Sent!",
+      "message": "Thanks for reaching out. We'll get back to you within 1 business day."
+    },
+    "error": {
+      "apiFallback": "Failed to send message",
+      "unexpected": "An unexpected error occurred"
+    },
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Your Question",
+    "messagePlaceholder": "What would you like to know about our landing page package?",
+    "submitButton": {
+      "default": "Send Message",
+      "sending": "Sending..."
+    }
+  },
   "orderSection": {
     "headline": "Ready to Order?",
     "description": "Start your affordable landing page project today and get your professional page live in as little as 3 weeks with our fast website design service.",
