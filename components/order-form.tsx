@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle } from "lucide-react";
+import { AlertCircle, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,6 +17,10 @@ interface Dictionary {
       headline: string;
       message: string;
       returnHomeButton: string;
+    };
+    error: {
+      apiFallback: string;
+      unexpected: string;
     };
     yourInfo: {
       title: string;
@@ -59,16 +63,26 @@ interface Dictionary {
     submitButton: {
       processing: string;
       default: string;
+      sending: string; // Added 'sending' state for button
     };
   };
   layout: {
-    // Need layout for the Return Home link text
     nav: {
-      home: string; // Text for "Home" link
-      // ... other nav items if needed
+      home: string;
     };
-    // ... other layout sections if needed
   };
+}
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  company: string;
+  website: string;
+  type: string;
+  description: string;
+  timeline: string;
 }
 
 export default function OrderForm({
@@ -80,17 +94,103 @@ export default function OrderForm({
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    website: "",
+    type: "business", // Default value
+    description: "",
+    timeline: "standard", // Default value
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  // Handle RadioGroup changes separately
+  const handleRadioChange = (name: keyof FormData, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      company,
+      website,
+      type,
+      description,
+      timeline,
+    } = formData;
+
+    const message = `
+      Name: ${firstName} ${lastName}
+      Email: ${email}
+      Phone: ${phone}
+      Company: ${company}
+      Website: ${website}
+      Project Type: ${type}
+      Description: ${description}
+      Timeline: ${timeline}
+    `;
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${firstName} ${lastName}`,
+          email,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || dict.orderForm.error.apiFallback);
+      }
+
       setIsSubmitted(true);
-      // In a real app, you'd handle the actual submission here
-    }, 1500);
+      // Optional: Clear the form on successful submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        website: "",
+        type: "business",
+        description: "",
+        timeline: "standard",
+      });
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : dict.orderForm.error.unexpected,
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -99,18 +199,13 @@ export default function OrderForm({
         <div className="mb-4 flex justify-center">
           <div className="rounded-full bg-green-100 p-3">
             <CheckCircle className="h-8 w-8 text-green-600" />
-            {/* Icon kept as-is */}
           </div>
         </div>
         <h3 className="mb-2 text-xl font-medium">
           {dict.orderForm.success.headline}
         </h3>
-        <p className="mb-6 text-gray-500">
-          {/* Use dictionary - &apos; handled in JSON */}
-          {dict.orderForm.success.message}
-        </p>
+        <p className="mb-6 text-gray-500">{dict.orderForm.success.message}</p>
         <Button asChild>
-          {/* Reuse layout Home text if appropriate, or use a specific key */}
           <Link href="/">{dict.layout.nav.home}</Link>
         </Button>
       </div>
@@ -119,6 +214,13 @@ export default function OrderForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
+      {error && (
+        <div className="flex items-start rounded-lg border border-red-100 bg-red-50 p-4 text-sm">
+          <AlertCircle className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-red-600" />
+          <p className="text-red-800">{error}</p>
+        </div>
+      )}
+
       <div className="rounded-lg border bg-white p-6">
         <h2 className="mb-4 text-xl font-bold">
           {dict.orderForm.yourInfo.title}
@@ -133,6 +235,8 @@ export default function OrderForm({
                 id="firstName"
                 placeholder={dict.orderForm.yourInfo.firstNamePlaceholder}
                 required
+                value={formData.firstName}
+                onChange={handleChange}
               />
             </div>
             <div className="grid gap-2">
@@ -143,6 +247,8 @@ export default function OrderForm({
                 id="lastName"
                 placeholder={dict.orderForm.yourInfo.lastNamePlaceholder}
                 required
+                value={formData.lastName}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -152,8 +258,10 @@ export default function OrderForm({
             <Input
               id="email"
               type="email"
-              placeholder="your@email.com" // Placeholder email kept as-is
+              placeholder="your@email.com"
               required
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
 
@@ -164,8 +272,9 @@ export default function OrderForm({
               type="tel"
               placeholder="(555) 123-4567"
               className="rtl:text-right"
+              value={formData.phone}
+              onChange={handleChange}
             />
-            {/* Placeholder phone kept as-is */}
           </div>
 
           <div className="grid gap-2">
@@ -176,6 +285,8 @@ export default function OrderForm({
               id="company"
               placeholder={dict.orderForm.yourInfo.companyPlaceholder}
               required
+              value={formData.company}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -193,7 +304,9 @@ export default function OrderForm({
             <Input
               id="website"
               type="url"
-              placeholder="https://yourwebsite.com" // Placeholder URL kept as-is
+              placeholder="https://yourwebsite.com"
+              value={formData.website}
+              onChange={handleChange}
             />
           </div>
 
@@ -202,11 +315,10 @@ export default function OrderForm({
             <RadioGroup
               defaultValue="business"
               dir={lang === "he" ? "rtl" : "ltr"}
+              onValueChange={(value) => handleRadioChange("type", value)}
             >
-              {/* Map over type options from dictionary */}
               {Object.keys(dict.orderForm.projectDetails.typeOptions).map(
                 (key) => {
-                  // Type assertion for safety
                   const optionKey =
                     key as keyof typeof dict.orderForm.projectDetails.typeOptions;
                   const label =
@@ -236,6 +348,8 @@ export default function OrderForm({
               placeholder={dict.orderForm.projectDetails.descriptionPlaceholder}
               className="min-h-[120px]"
               required
+              value={formData.description}
+              onChange={handleChange}
             />
           </div>
 
@@ -246,11 +360,10 @@ export default function OrderForm({
             <RadioGroup
               defaultValue="standard"
               dir={lang === "he" ? "rtl" : "ltr"}
+              onValueChange={(value) => handleRadioChange("timeline", value)}
             >
-              {/* Map over timeline options from dictionary */}
               {Object.keys(dict.orderForm.projectDetails.timelineOptions).map(
                 (key) => {
-                  // Type assertion for safety
                   const optionKey =
                     key as keyof typeof dict.orderForm.projectDetails.timelineOptions;
                   const label =
@@ -283,17 +396,13 @@ export default function OrderForm({
               {dict.orderForm.payment.scheduleHeadline}
             </h3>
             <ul className="list-disc space-y-1 pl-5 text-gray-600 rtl:pr-5 rtl:pl-0">
-              {/* Map over payment schedule items from dictionary */}
               {dict.orderForm.payment.scheduleItems.map((item, index) => (
-                // Using dangerouslySetInnerHTML as items contain HTML strong tags
-                // Ensure your CMS or source for these strings properly sanitizes HTML
                 <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
               ))}
             </ul>
           </div>
 
           <p className="text-gray-500">
-            {/* Use dictionary - apostrophes and price ($495) handled in JSON */}
             {dict.orderForm.payment.submissionText}
           </p>
 
@@ -316,9 +425,9 @@ export default function OrderForm({
         className="w-full"
         disabled={isSubmitting}
       >
-        {/* Use dictionary for button text based on state */}
         {isSubmitting
-          ? dict.orderForm.submitButton.processing
+          ? dict.orderForm.submitButton.sending || // Use 'sending' if available
+            dict.orderForm.submitButton.processing
           : dict.orderForm.submitButton.default}
       </Button>
     </form>
