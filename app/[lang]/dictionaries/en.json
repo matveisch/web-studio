@@ -314,6 +314,10 @@
       "message": "Thanks for ordering your landing page. We'll be in touch within 1 business day to get started.",
       "returnHomeButton": "Return to Home"
     },
+    "error": {
+      "apiFallback": "Failed to send your request. Please try again later.",
+      "unexpected": "An unexpected error occurred."
+    },
     "yourInfo": {
       "title": "Your Information",
       "firstNameLabel": "First Name",
@@ -357,7 +361,8 @@
     },
     "submitButton": {
       "processing": "Processing...",
-      "default": "Submit Order"
+      "default": "Submit Order",
+      "sending": "Sending..."
     }
   },
   "faqPage": {
