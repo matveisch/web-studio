@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "../globals.css";
@@ -77,6 +78,7 @@ export default async function RootLayout({
         {children}
         <Footer lang={lang} />
       </body>
+      <GoogleAnalytics gaId="AW-17172490707" />
     </html>
   );
 }
