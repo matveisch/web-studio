@@ -14,6 +14,9 @@ export async function generateMetadata({
   params: Promise<{ lang: "he" | "en" }>;
 }) {
   const { lang } = await params;
+  if (!["he", "en"].includes(lang)) {
+    return null; // or redirect("/")
+  }
   const dict = await getDictionary(lang);
 
   return {
@@ -29,6 +32,9 @@ export default async function Home({
   params: Promise<{ lang: "he" | "en" }>;
 }) {
   const { lang } = await params;
+  if (!["he", "en"].includes(lang)) {
+    return null; // or redirect("/")
+  }
   const dict = await getDictionary(lang);
 
   return (

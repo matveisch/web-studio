@@ -6,6 +6,10 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: "he" | "en") => {
+  if (!["he", "en"].includes(locale)) {
+    throw new Error(`Unsupported locale: ${locale}`);
+  }
+
   try {
     return await dictionaries[locale]();
   } catch (error) {

@@ -40,6 +40,7 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
     name: "",
     email: "",
     message: "",
+    website: "",
   });
 
   const handleChange = (
@@ -56,6 +57,11 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
+
+    if (formData.website) {
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/sendEmail", {
@@ -76,7 +82,7 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
 
       setIsSubmitted(true);
       // Optional: Clear the form on successful submission
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "", website: "" });
     } catch (err) {
       // Use dictionary for the unexpected error message
       setError(
@@ -107,6 +113,16 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <input
+        type="text"
+        name="website"
+        id="website"
+        className="hidden"
+        autoComplete="off"
+        tabIndex={-1}
+        value={formData.website || ""}
+        onChange={handleChange}
+      />
       {error && (
         <div className="flex items-start rounded-lg border border-red-100 bg-red-50 p-4 text-sm">
           <AlertCircle className="mt-0.5 mr-2 h-5 w-5 flex-shrink-0 text-red-600" />
