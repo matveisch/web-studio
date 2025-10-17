@@ -12,6 +12,9 @@ export async function generateMetadata({
   params: Promise<{ lang: "he" | "en" }>;
 }) {
   const { lang } = await params;
+  if (!["he", "en"].includes(lang)) {
+    return null; // or redirect("/")
+  }
   const dict = await getDictionary(lang);
   return {
     title: dict.layout.metadata.title,
@@ -46,6 +49,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const { lang } = await params;
+  if (!["he", "en"].includes(lang)) {
+    return null; // or redirect("/")
+  }
   const dict = await getDictionary(lang);
 
   return (
